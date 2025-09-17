@@ -1,0 +1,95 @@
+{
+  "intents": [
+    {
+      "tag": "symptoms",
+      "patterns": [
+        "what are the symptoms of *",
+        "symptoms of *",
+        "possible symptoms of *",
+        "symptoms for *",
+        "what are the effects of *",
+        "tell me the symptoms of *",
+        "signs of *",
+        "possible effects of *",
+        "show me the symptoms of *",
+        "how do I know if I have *",
+        "early symptoms of *",
+        "indications of *",
+        "how does * start",
+        "how can * affect me", 
+        "what should I look for if I have *"
+      ]
+    },
+    {
+      "tag": "precautions",
+      "patterns": [
+        "how to prevent *",
+        "what are the precautions to take for *",
+        "precautions for *",
+        "how can I stay safe from *",
+        "prevention of *",
+        "steps to avoid *",
+        "ways to protect myself from *",
+        "how do I avoid *",
+        "measures against *",
+        "safety tips for *",
+        "methods of prevention against*"
+      ]
+    },
+    {
+      "tag": "actions",
+      "patterns": [
+        "what to do if I have *",
+        "treatment for *",
+        "possible cure for *",
+        "how do i cure myself of *",
+        "Ways to cure *",
+        "how to manage *",
+        "first aid for *",
+        "actions to take for *",
+        "how to cure *",
+        "steps to take if I catch *",
+        "medical advice for *",
+        "what should I do for *"
+      ]
+    },
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hello",
+        "hi",
+        "hey",
+        "how are you today",
+        "nice to meet you",
+        "good morning",
+        "good evening",
+        "hi there",
+        "greetings"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "see you later",
+        "quit",
+        "bye bye",
+        "talk to you later",
+        "exit"
+      ]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [
+        "i don't understand",
+        "can you help me",
+        "not sure",
+        "what should i ask",
+        "repeat please",
+        "could you please repeat that",
+        "i need help"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1921 @@
+  [
+    {
+    "disease": "COVID-19",
+    "symptoms": [
+      "Fever",
+      "Dry cough",
+      "Fatigue",
+      "Loss of taste or smell",
+      "Difficulty breathing (severe cases)"
+    ],
+    "precautions": [
+      "Wear masks",
+      "Wash hands",
+      "Physical distancing",
+      "Get vaccinated"
+    ],
+    "actions": [
+      "Isolate if symptomatic",
+      "Seek testing",
+      "Monitor oxygen levels",
+      "Seek medical care if severe"
+    ]
+  },
+  {
+    "disease": "Influenza (Flu)",
+    "symptoms": [
+      "Fever",
+      "Cough",
+      "Sore throat",
+      "Runny nose",
+      "Body aches"
+    ],
+    "precautions": [
+      "Annual flu vaccination",
+      "Cover coughs/sneezes",
+      "Avoid close contact",
+      "Wash hands"
+    ],
+    "actions": [
+      "Rest and hydrate",
+      "Take antivirals if prescribed",
+      "Stay home until fever subsides"
+    ]
+  },
+  {
+    "disease": "Dengue Fever",
+    "symptoms": [
+      "High fever",
+      "Severe headache",
+      "Pain behind eyes",
+      "Joint and muscle pain",
+      "Skin rash"
+    ],
+    "precautions": [
+      "Avoid mosquito bites",
+      "Use repellents",
+      "Bed nets",
+      "Eliminate standing water"
+    ],
+    "actions": [
+      "Stay hydrated",
+      "Seek medical care",
+      "Avoid aspirin/NSAIDs",
+      "Hospitalization if severe"
+    ]
+  },
+  {
+    "disease": "Malaria",
+    "symptoms": [
+      "Fever",
+      "Chills",
+      "Sweating",
+      "Headache",
+      "Nausea"
+    ],
+    "precautions": [
+      "Mosquito nets",
+      "Antimalarial prophylaxis",
+      "Indoor spraying"
+    ],
+    "actions": [
+      "Seek treatment",
+      "Take prescribed antimalarials",
+      "Monitor complications"
+    ]
+  },
+  {
+    "disease": "Tuberculosis (TB)",
+    "symptoms": [
+      "Persistent cough",
+      "Chest pain",
+      "Coughing blood",
+      "Weight loss",
+      "Night sweats"
+    ],
+    "precautions": [
+      "BCG vaccination",
+      "Good ventilation",
+      "Avoid close contact"
+    ],
+    "actions": [
+      "Seek TB testing",
+      "Start DOTS therapy",
+      "Complete treatment course"
+    ]
+  },
+  {
+    "disease": "HIV/AIDS",
+    "symptoms": [
+      "Fever",
+      "Night sweats",
+      "Weight loss",
+      "Recurrent infections"
+    ],
+    "precautions": [
+      "Safe sex",
+      "Avoid sharing needles",
+      "Regular testing",
+      "PrEP"
+    ],
+    "actions": [
+      "Get tested",
+      "Start ART",
+      "Adhere to treatment"
+    ]
+  },
+  {
+    "disease": "Cholera",
+    "symptoms": [
+      "Watery diarrhea",
+      "Vomiting",
+      "Dehydration",
+      "Muscle cramps"
+    ],
+    "precautions": [
+      "Safe water",
+      "Food hygiene",
+      "Sanitation",
+      "Vaccination"
+    ],
+    "actions": [
+      "Oral rehydration",
+      "IV fluids if severe",
+      "Antibiotics if prescribed"
+    ]
+  },
+  {
+    "disease": "Hepatitis B",
+    "symptoms": [
+      "Fever",
+      "Fatigue",
+      "Jaundice",
+      "Abdominal pain",
+      "Dark urine"
+    ],
+    "precautions": [
+      "Vaccination",
+      "Avoid sharing needles",
+      "Safe sex"
+    ],
+    "actions": [
+      "Testing",
+      "Antivirals if chronic",
+      "Monitor liver function"
+    ]
+  },
+  {
+    "disease": "Measles",
+    "symptoms": [
+      "Fever",
+      "Cough",
+      "Runny nose",
+      "Red eyes",
+      "Rash starting on face"
+    ],
+    "precautions": [
+      "MMR vaccination",
+      "Avoid contact",
+      "Good ventilation"
+    ],
+    "actions": [
+      "Seek medical care",
+      "Supportive care",
+      "Vitamin A supplementation"
+    ]
+  },
+  {
+    "disease": "Chickenpox (Varicella)",
+    "symptoms": [
+      "Itchy rash with blisters",
+      "Fever",
+      "Fatigue"
+    ],
+    "precautions": [
+      "Vaccination",
+      "Avoid close contact"
+    ],
+    "actions": [
+      "Isolate until blisters scab",
+      "Relieve itching",
+      "Seek care if complications"
+    ]
+  },
+  {
+    "disease": "Rubella",
+    "symptoms": [
+      "Rashes",
+      "Low Fever",
+      "Nausea",
+      "Mild conjunctivitis"
+    ],
+    "precautions": [
+      "Vaccination"
+    ],
+    "actions": [
+      "Relieve itching",
+      "Seek medical care"
+    ]
+  },
+  {
+    "disease": "Polio",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Pertussis (Whooping Cough)",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Tetanus",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Diphtheria",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Typhoid Fever",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Leprosy",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Plague",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Zika Virus",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Ebola Virus Disease",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "MERS",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "SARS",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Hantavirus",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Rabies",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Yellow Fever",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Lassa Fever",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Nipah Virus",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Norovirus",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Rotavirus",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Giardiasis",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Amebiasis",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Trichomoniasis",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Syphilis",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Gonorrhea",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Chlamydia",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Herpes Simplex",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "HPV Infection",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Scabies",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Ringworm",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Athlete\u2019s Foot",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Hand, Foot and Mouth Disease",
+    "symptoms": [
+      "Symptom1",
+      "Symptom2",
+      "Symptom3"
+    ],
+    "precautions": [
+      "Precaution1",
+      "Precaution2"
+    ],
+    "actions": [
+      "Action1",
+      "Action2"
+    ]
+  },
+  {
+    "disease": "Pneumonia",
+    "symptoms": [
+      "Chest pain when breathing or coughing",
+      "Altered mental status (confusion)",
+      "Cough",
+      "Fatigue (feeling tired)",
+      "Fever or chills",
+      "Nausea, vomiting, or diarrhea",
+      "Shortness of breath"
+    ],
+    "precautions": [
+      "Vaccination",
+      "Be hygenic"
+    ],
+    "actions": [
+       "Take good care of chronic conditions(if any)",
+      "Limit contact with cigaratte and cigarrate smoke"
+    ]
+  },
+  {
+    "disease": "Bronchitis",
+    "symptoms": [
+      "Cough (productive or dry)",
+      "Sputum production (clear, yellow, or green)",
+      "Chest tightness or discomfort",
+      "Shortness of breath with exertion",
+      "Wheezing",
+      "Low-grade fever",
+      "Fatigue"
+    ],
+    "precautions": [
+      "Avoid smoking and secondhand smoke",
+      "Practice good hand hygiene (wash hands frequently)",
+      "Cover coughs and sneezes; use tissues or elbow crease",
+      "Stay away from people with respiratory infections when contagious"
+    ],
+    "actions": [
+      "Rest, stay hydrated, and use humidified air",
+      "See a clinician if cough persists >3 weeks, breathing difficulty, or high fever",
+      "Use prescribed bronchodilators or inhaled medications if indicated"
+    ]
+  },
+  {
+    "disease": "Whooping Cough",
+    "symptoms": [
+      "Severe, prolonged coughing spells",
+      "High-pitched 'whoop' sound on inspiration (especially in children)",
+      "Post-tussive vomiting (vomiting after coughing)",
+      "Apnea or cyanosis in infants",
+      "Runny nose and mild fever initially",
+      "Exhaustion after coughing spells"
+    ],
+    "precautions": [
+      "Vaccination (DTaP for children, Tdap booster for adolescents/adults)",
+      "Avoid contact with infants or unvaccinated people if symptomatic",
+      "Cover coughs, practice hand hygiene, and isolate during contagious period"
+    ],
+    "actions": [
+      "Seek medical care promptly—antibiotics (macrolides) may be prescribed",
+      "Isolate infected individuals until completion of recommended antibiotics",
+      "Provide supportive care; monitor infants closely for apnea or feeding problems"
+    ]
+  },
+  {
+    "disease": "Strep Throat",
+    "symptoms": [
+      "Sudden sore throat with pain on swallowing",
+      "Fever (often >38°C / 100.4°F)",
+      "Swollen, tender anterior cervical lymph nodes",
+      "Tonsillar exudates or red swollen tonsils",
+      "Absence of cough (helps distinguish from viral URI)",
+      "Headache, abdominal pain (especially in children)"
+    ],
+    "precautions": [
+      "Avoid close contact with infected persons",
+      "Good hand hygiene and respiratory etiquette",
+      "Do not share eating utensils or toothbrushes while symptomatic"
+    ],
+    "actions": [
+      "See a healthcare provider for testing (rapid antigen or throat culture)",
+      "Start antibiotics (if confirmed) and complete full course",
+      "Stay home until 24 hours after starting effective antibiotics and fever-free"
+    ]
+  },
+  {
+    "disease": "Meningitis",
+    "symptoms": [
+      "Sudden high fever",
+      "Severe headache",
+      "Neck stiffness (inability to flex neck forward)",
+      "Photophobia (light sensitivity)",
+      "Nausea and vomiting",
+      "Altered mental status or confusion",
+      "Seizures (sometimes)",
+      "Rash (petechial/purpuric with certain bacterial meningitis)"
+    ],
+    "precautions": [
+      "Vaccination where available (e.g., meningococcal, pneumococcal, Hib)",
+      "Avoid sharing utensils or close contact with people with suspected meningitis",
+      "Practice good hand hygiene"
+    ],
+    "actions": [
+      "Seek emergency medical care immediately",
+      "Early empiric antibiotics for suspected bacterial meningitis",
+      "Close contacts may need prophylactic antibiotics or vaccination per public-health guidance"
+    ]
+  },
+  {
+    "disease": "Lyme Disease",
+    "symptoms": [
+      "Expanding erythema migrans (bull's-eye) rash at tick bite site",
+      "Fever and chills",
+      "Headache",
+      "Fatigue",
+      "Muscle and joint aches (arthralgia/myalgia)",
+      "Regional lymphadenopathy",
+      "If untreated: cardiac (heart block), neurological (facial palsy, radiculopathy) or chronic arthritis"
+    ],
+    "precautions": [
+      "Use insect repellent with DEET or picaridin in tick-prone areas",
+      "Wear long sleeves/pants and tuck pants into socks; perform tick checks",
+      "Shower soon after possible exposure and remove ticks promptly"
+    ],
+    "actions": [
+      "Remove ticks promptly and properly (with fine-tipped tweezers)",
+      "See healthcare provider for assessment; antibiotics may be prescribed if indicated",
+      "Monitor for late signs (neurologic or rheumatologic) and follow-up if symptoms develop"
+    ]
+  },
+  {
+    "disease": "Leptospirosis",
+    "symptoms": [
+      "High fever and chills",
+      "Severe headache",
+      "Muscle aches (notably calf muscles)",
+      "Red eyes (conjunctival suffusion)",
+      "Jaundice in severe cases",
+      "Nausea, vomiting, abdominal pain",
+      "Cough, shortness of breath if pulmonary involvement"
+    ],
+    "precautions": [
+      "Avoid swimming or wading in water possibly contaminated with animal urine",
+      "Wear protective clothing when handling animals or working in contaminated environments",
+      "Control rodents and maintain clean water supplies"
+    ],
+    "actions": [
+      "Seek medical attention for suspected infection—antibiotics (doxycycline, penicillin) may be given",
+      "Hospitalize and provide supportive care for severe disease (renal or hepatic involvement)",
+      "Report outbreaks to public-health authorities as required"
+    ]
+  },
+  {
+    "disease": "Anthrax",
+    "symptoms": [
+      "Cutaneous: painless ulcer with black necrotic center",
+      "Inhalation: flu-like symptoms progressing to severe respiratory distress",
+      "Gastrointestinal: severe abdominal pain, vomiting, bloody diarrhea",
+      "Fever and malaise",
+      "Swollen regional lymph nodes (cutaneous)",
+      "Septicemia in severe cases"
+    ],
+    "precautions": [
+      "Avoid contact with contaminated animal products and soil in endemic areas",
+      "Use personal protective equipment when handling potentially infected animals/materials",
+      "Vaccination for at-risk occupational groups where available"
+    ],
+    "actions": [
+      "Seek urgent medical care—early antibiotic therapy is critical",
+      "Report suspected cases to public-health authorities immediately",
+      "Provide supportive care and consider antitoxin for severe systemic disease"
+    ]
+  },
+  {
+    "disease": "Toxoplasmosis",
+    "symptoms": [
+      "Often asymptomatic in healthy people",
+      "Flu-like symptoms: fever, muscle aches, swollen lymph nodes",
+      "In immunocompromised: severe encephalitis, confusion, seizures",
+      "In congenital infection: chorioretinitis, hydrocephalus, intracranial calcifications",
+      "Eye pain or visual disturbance when ocular disease present"
+    ],
+    "precautions": [
+      "Avoid handling cat litter if pregnant; change litter daily or have another person do it",
+      "Cook meat thoroughly and avoid raw or undercooked meat",
+      "Wash fruits and vegetables before eating"
+    ],
+    "actions": [
+      "Pregnant or immunocompromised persons with exposure should seek medical advice/testing",
+      "Specific antiparasitic therapy (pyrimethamine + sulfadiazine with folinic acid) for indicated cases",
+      "Follow obstetric guidance and fetal monitoring for congenital risk"
+    ]
+  },
+  {
+    "disease": "Cytomegalovirus",
+    "symptoms": [
+      "Often asymptomatic in healthy people",
+      "Mononucleosis-like illness: fever, sore throat, swollen glands, fatigue",
+      "In newborns (congenital CMV): hearing loss, microcephaly, developmental delay",
+      "In immunocompromised: severe systemic disease affecting liver, lungs, GI tract, or eyes"
+    ],
+    "precautions": [
+      "Practice hand hygiene, especially when caring for young children or changing diapers",
+      "Use safe sex practices to reduce transmission",
+      "Screen/monitor high-risk pregnant women or immunocompromised patients when indicated"
+    ],
+    "actions": [
+      "Seek medical evaluation if severe illness or pregnancy exposure suspected",
+      "Antiviral therapy (ganciclovir/valganciclovir) may be used in severe or congenital cases",
+      "Monitor neonates with congenital infection for hearing and developmental issues"
+    ]
+  },
+  {
+    "disease": "RSV (Respiratory Syncytial Virus)",
+    "symptoms": [
+      "Runny nose",
+      "Cough and sneezing",
+      "Fever (often low-grade)",
+      "Wheezing and difficulty breathing (especially in infants)",
+      "Poor feeding or lethargy in infants",
+      "Apnea in very young infants"
+    ],
+    "precautions": [
+      "Practice hand hygiene and respiratory etiquette",
+      "Avoid close contact with high-risk infants if you are symptomatic",
+      "Disinfect frequently touched surfaces and avoid sharing utensils"
+    ],
+    "actions": [
+      "Supportive care: hydration, oxygen therapy for severe cases",
+      "Seek prompt care for infants with difficulty breathing or poor feeding",
+      "High-risk infants may receive preventive monoclonal antibody per clinical guidelines"
+    ]
+  },
+  {
+    "disease": "Common Cold (Rhinovirus)",
+    "symptoms": [
+      "Nasal congestion and runny nose",
+      "Sneezing",
+      "Sore or scratchy throat",
+      "Cough",
+      "Mild headache or malaise",
+      "Low-grade fever (more common in children)"
+    ],
+    "precautions": [
+      "Frequent handwashing and respiratory etiquette",
+      "Avoid close contact with sick individuals",
+      "Disinfect commonly touched surfaces"
+    ],
+    "actions": [
+      "Rest, fluids, saline nasal irrigation and symptomatic care (decongestants, analgesics as appropriate)",
+      "See a clinician if severe symptoms, high fever, or breathing difficulty occur",
+      "Stay home while symptomatic to reduce spread"
+    ]
+  },
+  {
+    "disease": "Parainfluenza",
+    "symptoms": [
+      "Cough and hoarseness",
+      "Fever",
+      "Runny nose",
+      "Sore throat",
+      "Croup (barking cough and stridor) in young children",
+      "Wheezing or bronchiolitis in infants"
+    ],
+    "precautions": [
+      "Good hand hygiene and respiratory etiquette",
+      "Avoid contact with people showing respiratory symptoms",
+      "Disinfect surfaces in childcare settings"
+    ],
+    "actions": [
+      "Supportive care: humidified air, hydration, oxygen if needed",
+      "Seek medical attention for stridor, breathing difficulty or dehydration",
+      "Hospitalize severe pediatric cases for airway support if necessary"
+    ]
+  },
+  {
+    "disease": "Legionnaires’ Disease",
+    "symptoms": [
+      "High fever",
+      "Chills",
+      "Cough (often productive)",
+      "Shortness of breath",
+      "Muscle aches",
+      "Headache",
+      "Gastrointestinal symptoms (nausea, diarrhea) in some cases"
+    ],
+    "precautions": [
+      "Maintain and disinfect building water systems (cooling towers, hot tubs, plumbing) per public-health guidance",
+      "Avoid inhaling aerosolized water from poorly maintained systems",
+      "Follow local public-health recommendations for prevention"
+    ],
+    "actions": [
+      "Seek medical care—diagnostic testing (urinary antigen, culture) and chest imaging may be done",
+      "Start appropriate antibiotics (macrolide or fluoroquinolone) as recommended",
+      "Report clusters to public-health authorities for source investigation"
+    ]
+  },
+  {
+    "disease": "Kawasaki Disease",
+    "symptoms": [
+      "Prolonged fever (≥5 days)",
+      "Conjunctival injection (red eyes) without pus",
+      "Red cracked lips and strawberry tongue",
+      "Rash",
+      "Swollen hands and feet with redness",
+      "Swollen cervical lymph nodes",
+      "Irritability in children"
+    ],
+    "precautions": [
+      "No known prevention—early recognition is key",
+      "Prompt evaluation of persistent fever in young children",
+      "Follow pediatric infectious-disease and cardiology guidance"
+    ],
+    "actions": [
+      "Urgent medical evaluation—IVIG (intravenous immunoglobulin) and aspirin therapy often started",
+      "Echocardiography to assess for coronary artery involvement",
+      "Close follow-up with pediatric cardiology"
+    ]
+  },
+  {
+    "disease": "Shigellosis",
+    "symptoms": [
+      "Watery or bloody diarrhea",
+      "Abdominal cramps and pain",
+      "Fever",
+      "Tenesmus (feeling of incomplete defecation)",
+      "Nausea and vomiting in some cases"
+    ],
+    "precautions": [
+      "Strict handwashing after using toilet and before eating",
+      "Safe food handling and sanitation",
+      "Avoid preparing food for others while symptomatic"
+    ],
+    "actions": [
+      "Hydration and electrolyte replacement; seek care for severe or bloody diarrhea",
+      "Antibiotics for severe cases or as recommended by local guidelines",
+      "Report outbreaks to public-health authorities when indicated"
+    ]
+  },
+  {
+    "disease": "Campylobacteriosis",
+    "symptoms": [
+      "Diarrhea (sometimes bloody)",
+      "Abdominal cramping and pain",
+      "Fever",
+      "Nausea and vomiting",
+      "Headache and malaise"
+    ],
+    "precautions": [
+      "Cook poultry thoroughly and avoid cross-contamination",
+      "Practice safe food handling and hand hygiene",
+      "Avoid untreated water and unpasteurized dairy products"
+    ],
+    "actions": [
+      "Hydration and supportive care; seek care for severe illness",
+      "Antibiotics for severe or high-risk cases per clinician",
+      "Report to public-health authorities if part of a suspected outbreak"
+    ]
+  },
+  {
+    "disease": "Listeriosis",
+    "symptoms": [
+      "Fever and muscle aches",
+      "Gastrointestinal symptoms (nausea, diarrhea)",
+      "Headache, stiff neck, confusion, loss of balance in invasive disease",
+      "In pregnant women: flu-like symptoms then possible fetal infection (stillbirth, preterm delivery)",
+      "Neonatal sepsis or meningitis in newborns"
+    ],
+    "precautions": [
+      "Avoid high-risk foods during pregnancy (unpasteurized dairy, deli meats unless heated, refrigerated smoked seafood)",
+      "Practice good food hygiene and proper refrigeration",
+      "Follow guidance for at-risk populations (pregnant, elderly, immunocompromised)"
+    ],
+    "actions": [
+      "Seek prompt medical attention—antibiotic therapy (ampicillin ± gentamicin) for invasive disease",
+      "Hospital care and monitoring for severe cases or neonates",
+      "Report cases to public-health authorities as required"
+    ]
+  },
+  {
+    "disease": "Salmonellosis",
+    "symptoms": [
+      "Diarrhea (may be watery or bloody)",
+      "Abdominal cramps",
+      "Fever",
+      "Nausea and vomiting",
+      "Headache and muscle pain"
+    ],
+    "precautions": [
+      "Cook eggs and poultry thoroughly and avoid cross-contamination",
+      "Practice hand hygiene after contact with animals (especially reptiles, poultry)",
+      "Avoid unpasteurized dairy and improperly handled food"
+    ],
+    "actions": [
+      "Hydration and supportive care; seek care for severe or prolonged illness",
+      "Antibiotics for severe invasive disease or high-risk patients per clinician",
+      "Report outbreaks to public-health authorities if suspected"
+    ]
+  },
+  {
+    "disease": "E. coli infection",
+    "symptoms": [
+      "Watery diarrhea that may progress to bloody diarrhea (esp. E. coli O157:H7)",
+      "Severe abdominal cramping",
+      "Fever (may be low grade)",
+      "Nausea and vomiting",
+      "In severe cases: hemolytic uremic syndrome (HUS) signs—reduced urine, pallor, bruising"
+    ],
+    "precautions": [
+      "Cook ground beef thoroughly and avoid unpasteurized dairy/juices",
+      "Practice strict hand hygiene after animal contact and restroom use",
+      "Prevent cross-contamination in the kitchen"
+    ],
+    "actions": [
+      "Hydration and medical evaluation for bloody diarrhea or severe symptoms",
+      "Avoid routine antibiotics for some strains unless indicated; follow clinical guidance",
+      "Seek urgent care for signs of HUS (reduced urination, bleeding, pallor)"
+    ]
+  },
+  {
+    "disease": "Candidiasis",
+    "symptoms": [
+      "Oral thrush: white plaques on tongue and oral mucosa",
+      "Vaginal yeast infection: itching, thick white discharge, dysuria",
+      "Cutaneous candidiasis: red, itchy rash in skin folds",
+      "In invasive disease: fever, chills, signs of sepsis in hospitalized patients"
+    ],
+    "precautions": [
+      "Maintain good hygiene and dry skin folds well",
+      "Avoid unnecessary antibiotic use which can predispose to overgrowth",
+      "Follow safe sexual practices if recurrent vaginal infections"
+    ],
+    "actions": [
+      "Topical or oral antifungal therapy depending on site and severity",
+      "Evaluate for underlying predispositions (diabetes, immunosuppression)",
+      "Hospital management and systemic antifungals for invasive candidiasis"
+    ]
+  },
+  {
+    "disease": "Histoplasmosis",
+    "symptoms": [
+      "Often asymptomatic or mild respiratory illness (cough, fever, chest pain)",
+      "Flu-like symptoms with fatigue and chills",
+      "Chronic pulmonary disease resembling tuberculosis in some",
+      "Disseminated disease: fever, weight loss, hepatosplenomegaly, lymphadenopathy"
+    ],
+    "precautions": [
+      "Avoid exposure to bat or bird droppings (caves, chicken coops) where endemic",
+      "Use protective equipment and dust suppression when disturbing contaminated soil",
+      "Follow occupational safety recommendations in endemic areas"
+    ],
+    "actions": [
+      "Mild cases may resolve without treatment; antifungal therapy (itraconazole) for moderate to severe disease",
+      "Amphotericin B for severe/disseminated infection",
+      "Seek medical care if symptoms persist or worsen"
+    ]
+  },
+  {
+    "disease": "Blastomycosis",
+    "symptoms": [
+      "Fever and cough",
+      "Chest pain and shortness of breath",
+      "Skin lesions (verrucous or ulcerated) in disseminated disease",
+      "Weight loss, fatigue, and systemic symptoms"
+    ],
+    "precautions": [
+      "Avoid activities that disturb moist soil in endemic regions",
+      "Use protective equipment if occupational exposure likely",
+      "Follow local public-health guidance in endemic areas"
+    ],
+    "actions": [
+      "Antifungal therapy (itraconazole for mild/moderate; amphotericin B for severe disease)",
+      "Seek healthcare evaluation for persistent respiratory or skin symptoms",
+      "Monitor for dissemination in immunocompromised individuals"
+    ]
+  },
+  {
+    "disease": "Cryptococcus",
+    "symptoms": [
+      "Fever and cough in pulmonary infection",
+      "Meningeal signs (headache, neck stiffness, confusion) in cryptococcal meningitis",
+      "Focal neurologic deficits and altered mental status in severe cases",
+      "Skin lesions in disseminated disease"
+    ],
+    "precautions": [
+      "Limit exposure to environments with bird droppings if immunocompromised",
+      "Use protective equipment for high-risk occupational exposure",
+      "Vaccination is not available—manage risk through exposure control"
+    ],
+    "actions": [
+      "Antifungal therapy (amphotericin B ± flucytosine followed by fluconazole for meningitis)",
+      "Urgent medical care for neurologic signs",
+      "Long-term antifungal therapy and monitoring in immunocompromised patients"
+    ]
+  },
+  {
+    "disease": "Pneumocystis pneumonia (PCP)",
+    "symptoms": [
+      "Progressive shortness of breath",
+      "Nonproductive cough",
+      "Fever",
+      "Fatigue and malaise",
+      "Hypoxia (low oxygen levels) on exertion or at rest"
+    ],
+    "precautions": [
+      "Prophylaxis (e.g., trimethoprim-sulfamethoxazole) for high-risk immunocompromised patients (HIV with low CD4, transplant recipients)",
+      "Minimize exposure to respiratory pathogens in immunosuppressed individuals",
+      "Prompt evaluation of early respiratory symptoms in at-risk patients"
+    ],
+    "actions": [
+      "Start appropriate antimicrobial therapy (TMP-SMX) with adjunctive corticosteroids if indicated",
+      "Hospitalize for oxygen support if hypoxic",
+      "Investigate and manage underlying immune suppression"
+    ]
+  },
+  {
+    "disease": "Tinea infections",
+    "symptoms": [
+      "Round, scaly, ring-like rash with central clearing (tinea corporis)",
+      "Itching and redness in affected area",
+      "Athlete's foot: scaling, cracking, itching between toes",
+      "Tinea capitis: scaly patches on the scalp, hair loss, black dots"
+    ],
+    "precautions": [
+      "Keep skin clean and dry; avoid shared footwear/towels",
+      "Use antifungal powders in shoes and on feet if prone to infection",
+      "Avoid walking barefoot in communal wet areas (locker rooms, pools)"
+    ],
+    "actions": [
+      "Topical antifungal agents for localized infections (azoles or allylamines)",
+      "Oral antifungals for extensive or scalp/nail involvement",
+      "Maintain hygiene and treat close contacts if recurrent"
+    ]
+  },
+  {
+    "disease": "Otitis Media",
+    "symptoms": [
+      "Ear pain (otalgia)",
+      "Fever",
+      "Irritability in young children",
+      "Reduced hearing or ear fullness",
+      "Otorrhea (ear discharge) if tympanic membrane perforation"
+    ],
+    "precautions": [
+      "Reduce smoke exposure and limit pacifier use in infants",
+      "Breastfeed infants when possible and follow immunization schedule",
+      "Practice hand hygiene to reduce upper respiratory infections"
+    ],
+    "actions": [
+      "Analgesics for pain relief (acetaminophen/ibuprofen as appropriate)",
+      "Watchful waiting for uncomplicated cases in select children; antibiotics per guidelines if severe or persistent",
+      "Refer/ENT evaluation for recurrent or complicated cases"
+    ]
+  },
+  {
+    "disease": "Conjunctivitis (Pink Eye)",
+    "symptoms": [
+      "Redness of the eye(s)",
+      "Eye discharge (watery in viral; purulent in bacterial)",
+      "Itching or burning sensation",
+      "Tearing and crusting of eyelids",
+      "Grittiness or foreign-body sensation"
+    ],
+    "precautions": [
+      "Avoid touching eyes and practice hand hygiene",
+      "Do not share towels, pillows, or eye cosmetics",
+      "Stay home from school/work until non-contagious if advised"
+    ],
+    "actions": [
+      "Viral: supportive care (cold compresses, artificial tears)",
+      "Bacterial: topical antibiotics if prescribed by clinician",
+      "Seek urgent care for severe pain, vision changes, or intense redness"
+    ]
+  },
+  {
+    "disease": "Trachoma",
+    "symptoms": [
+      "Eye irritation and redness",
+      "Discharge and crusting on eyelashes",
+      "Eyelid scarring and inward turning of eyelashes (trichiasis) in chronic disease",
+      "Progressive visual impairment if untreated"
+    ],
+    "precautions": [
+      "Improve facial hygiene and sanitation in endemic areas",
+      "Avoid sharing towels and bedding",
+      "Community-wide interventions (SAFE strategy): Surgery, Antibiotics, Facial cleanliness, Environmental improvements"
+    ],
+    "actions": [
+      "Antibiotic therapy (oral azithromycin or topical tetracycline) as recommended",
+      "Surgery for trichiasis to prevent corneal damage",
+      "Public-health measures to reduce transmission and re-infection"
+    ]
+  },
+  {
+    "disease": "Kala-azar (Leishmaniasis)",
+    "symptoms": [
+      "Prolonged fever",
+      "Weight loss and fatigue",
+      "Enlarged spleen and liver (splenomegaly/hepatomegaly)",
+      "Anemia and pancytopenia in visceral disease",
+      "Skin ulcers or lesions in cutaneous forms"
+    ],
+    "precautions": [
+      "Use insect repellent and bed nets in endemic areas",
+      "Wear protective clothing and minimize outdoor exposure at dusk/dawn",
+      "Control sandfly habitats and reservoir animals where possible"
+    ],
+    "actions": [
+      "Seek medical diagnosis and antileishmanial therapy (e.g., amphotericin formulations or pentavalent antimonials depending on region and form)",
+      "Supportive care for nutritional and hematologic complications",
+      "Report cases to public-health authorities if part of control programs"
+    ]
+  },
+  {
+    "disease": "Filariasis",
+    "symptoms": [
+      "Often asymptomatic initially",
+      "Fever and lymphadenitis in acute stages",
+      "Lymphedema and elephantiasis in chronic disease",
+      "Hydrocele in men",
+      "Skin changes and secondary infections"
+    ],
+    "precautions": [
+      "Use insect repellent and mosquito nets in endemic areas",
+      "Participate in community mass drug administration (MDA) programs where available",
+      "Avoid mosquito exposure during peak biting times"
+    ],
+    "actions": [
+      "Antiparasitic therapy (e.g., ivermectin, albendazole, diethylcarbamazine) per program guidelines",
+      "Hygiene and management of lymphedema to prevent complications",
+      "Community/ public-health control measures to reduce transmission"
+    ]
+  },
+  {
+    "disease": "Onchocerciasis (River Blindness)",
+    "symptoms": [
+      "Intense itching",
+      "Skin changes (hyperpigmentation, nodules)",
+      "Eye lesions leading to visual impairment and blindness",
+      "Subcutaneous nodules"
+    ],
+    "precautions": [
+      "Avoid blackfly exposure in endemic riverine areas",
+      "Support and participate in mass drug administration programs (e.g., ivermectin)",
+      "Use protective clothing and insect repellent where applicable"
+    ],
+    "actions": [
+      "Mass drug administration with ivermectin per local program",
+      "Ocular care and management of skin disease symptoms",
+      "Public-health surveillance and vector control"
+    ]
+  },
+  {
+    "disease": "Schistosomiasis",
+    "symptoms": [
+      "Itchy skin or rash at penetration site",
+      "Fever, chills, cough in early stages",
+      "Abdominal pain, diarrhea, or blood in stool (intestinal forms)",
+      "Urinary symptoms and blood in urine (urogenital forms)",
+      "Long-term: liver fibrosis, bladder pathology, increased risk of bladder cancer"
+    ],
+    "precautions": [
+      "Avoid swimming or wading in freshwater in endemic areas",
+      "Use safe water sources and sanitation improvements",
+      "Participate in community treatment programs"
+    ],
+    "actions": [
+      "Antiparasitic therapy (praziquantel) per local guidelines",
+      "Health education and sanitation improvements to reduce reinfection",
+      "Monitor and manage chronic complications with medical and surgical care as needed"
+    ]
+  },
+  {
+    "disease": "Ascariasis",
+    "symptoms": [
+      "Often asymptomatic with light infection",
+      "Abdominal discomfort and possible intestinal obstruction in heavy infection",
+      "Cough and wheeze during larval migration (pulmonary phase)",
+      "Nutritional deficiencies and growth impairment in children"
+    ],
+    "precautions": [
+      "Practice hand hygiene and wash fruits/vegetables",
+      "Use sanitation and prevent open defecation",
+      "Wash hands before eating and after soil contact"
+    ],
+    "actions": [
+      "Anthelmintic therapy (albendazole or mebendazole) as prescribed",
+      "Mass drug administration in endemic settings",
+      "Surgical intervention for intestinal obstruction if necessary"
+    ]
+  },
+  {
+    "disease": "Hookworm infection",
+    "symptoms": [
+      "Itchy rash at penetration site",
+      "Iron-deficiency anemia, fatigue, pallor",
+      "Abdominal pain and digestive disturbances",
+      "In heavy infections: growth and cognitive impairment in children"
+    ],
+    "precautions": [
+      "Wear shoes to avoid skin contact with contaminated soil",
+      "Improve sanitation and avoid open defecation",
+      "Health education and hygiene promotion"
+    ],
+    "actions": [
+      "Anthelmintic therapy (albendazole or mebendazole)",
+      "Iron supplementation and nutritional support for anemic patients",
+      "Community deworming programs in endemic areas"
+    ]
+  },
+  {
+    "disease": "Trichuriasis",
+    "symptoms": [
+      "Often asymptomatic in light infection",
+      "Abdominal pain and diarrhea",
+      "Rectal prolapse in severe pediatric cases",
+      "Growth retardation in heavy infections"
+    ],
+    "precautions": [
+      "Practice sanitation and hand hygiene",
+      "Avoid ingestion of soil or unwashed produce",
+      "Participate in community deworming where provided"
+    ],
+    "actions": [
+      "Anthelmintic therapy (e.g., albendazole, mebendazole) per guidance",
+      "Nutrition and monitoring for growth in children",
+      "Public-health interventions to reduce transmission"
+    ]
+  },
+  {
+    "disease": "Strongyloidiasis",
+    "symptoms": [
+      "Skin rash at penetration site",
+      "Persistent abdominal pain, diarrhea",
+      "Cough and respiratory symptoms during migration",
+      "Severe disseminated disease in immunosuppressed: sepsis-like picture"
+    ],
+    "precautions": [
+      "Avoid contact with contaminated soil and wear protective footwear",
+      "Screen high-risk individuals before immunosuppression",
+      "Improve sanitation and hygiene"
+    ],
+    "actions": [
+      "Anthelmintic therapy (ivermectin preferred)",
+      "Hospitalize and treat severe or disseminated infection aggressively",
+      "Screen and treat contacts in endemic areas if indicated"
+    ]
+  },
+  {
+    "disease": "Taeniasis",
+    "symptoms": [
+      "Often mild gastrointestinal symptoms",
+      "Abdominal pain, nausea",
+      "Passage of tapeworm segments in stool (proglottids)",
+      "Weight loss or malnutrition in heavy infection"
+    ],
+    "precautions": [
+      "Cook pork/beef thoroughly and practice good food hygiene",
+      "Avoid consumption of raw or undercooked meat",
+      "Proper sanitation to interrupt fecal-oral transmission"
+    ],
+    "actions": [
+      "Antiparasitic therapy (praziquantel or niclosamide) as prescribed",
+      "Stool testing and treatment of household contacts if indicated",
+      "Food safety education"
+    ]
+  },
+  {
+    "disease": "Cysticercosis",
+    "symptoms": [
+      "Often asymptomatic for non-neurologic cysts",
+      "Neurocysticercosis: seizures, headaches, focal neurologic deficits",
+      "Increased intracranial pressure in severe cases",
+      "Cystic lesions on imaging (CT/MRI)"
+    ],
+    "precautions": [
+      "Cook pork thoroughly and maintain sanitation",
+      "Wash hands and food to prevent fecal-oral transmission",
+      "Treat human carriers of intestinal tapeworm to prevent spread"
+    ],
+    "actions": [
+      "Neuroimaging and neurologic evaluation for suspected neurocysticercosis",
+      "Antiparasitic therapy (albendazole ± praziquantel) plus anti-inflammatory and antiepileptic management when indicated",
+      "Surgical intervention in selected cases with mass effect or hydrocephalus"
+    ]
+  },
+  {
+    "disease": "Echinococcosis",
+    "symptoms": [
+      "Often asymptomatic for years",
+      "Cystic lesions in liver (pain, biliary obstruction) or lungs (cough, chest pain)",
+      "Allergic reactions if cyst ruptures",
+      "Abdominal mass or discomfort depending on location"
+    ],
+    "precautions": [
+      "Avoid feeding dogs raw offal in endemic areas; deworm dogs per guidelines",
+      "Practice hand hygiene after handling dogs",
+      "Proper slaughterhouse hygiene and meat inspection"
+    ],
+    "actions": [
+      "Imaging for diagnosis and specialist referral (surgical removal or percutaneous drainage for certain cysts)",
+      "Albendazole therapy pre- and/or post-procedure as indicated",
+      "Public-health measures for animal hosts to reduce transmission"
+    ]
+  },
+  {
+    "disease": "Brucellosis",
+    "symptoms": [
+      "Undulating fever and sweats (especially at night)",
+      "Fatigue and malaise",
+      "Arthralgia and myalgia",
+      "Headache and loss of appetite",
+      "Possible focal complications (osteomyelitis, endocarditis)"
+    ],
+    "precautions": [
+      "Avoid unpasteurized dairy products and raw milk",
+      "Use protective equipment when handling animals or animal tissues",
+      "Vaccinate livestock where programs exist"
+    ],
+    "actions": [
+      "Seek medical care—combination antibiotic therapy (e.g., doxycycline + rifampin or doxycycline + streptomycin) as prescribed",
+      "Prolonged treatment for preventing relapse",
+      "Reportable disease in many jurisdictions—notify public health if required"
+    ]
+  },
+  {
+    "disease": "Tularemia",
+    "symptoms": [
+      "Sudden fever and chills",
+      "Skin ulcer at site of entry with regional lymphadenopathy (ulceroglandular form)",
+      "Pneumonia-like symptoms in pulmonary tularemia",
+      "Headache, muscle aches, fatigue"
+    ],
+    "precautions": [
+      "Avoid handling wild animals or use protective gear and gloves",
+      "Prevent tick and insect bites with repellents and protective clothing",
+      "Practice safe food and water handling"
+    ],
+    "actions": [
+      "Seek medical evaluation—antibiotics (e.g., streptomycin, gentamicin, or doxycycline) are recommended",
+      "Report to public-health authorities as appropriate",
+      "Provide supportive care for severe pulmonary disease"
+    ]
+  },
+  {
+    "disease": "Psittacosis",
+    "symptoms": [
+      "Fever and chills",
+      "Dry cough and shortness of breath",
+      "Headache and muscle aches",
+      "Chest pain and nonproductive cough in pneumonia cases"
+    ],
+    "precautions": [
+      "Practice good hygiene around birds and pet birds; avoid exposure to droppings and secretions",
+      "Quarantine and test sick birds; use protective equipment when handling birds",
+      "Avoid purchasing or handling sick birds"
+    ],
+    "actions": [
+      "Seek medical care—tetracycline or macrolide antibiotics are commonly used",
+      "Report suspected zoonotic transmission to public-health or veterinary services",
+      "Provide supportive care for pneumonia and monitor respiratory status"
+    ]
+  },
+  {
+    "disease": "Q Fever",
+    "symptoms": [
+      "Fever and severe headache",
+      "Myalgia and fatigue",
+      "Pneumonia-like symptoms in some cases",
+      "Hepatitis with abnormal liver enzymes in some patients"
+    ],
+    "precautions": [
+      "Avoid contact with birth tissues or fluids from farm animals without protective equipment",
+      "Use appropriate PPE for at-risk occupations (veterinarians, abattoir workers)",
+      "Control animal infection and follow farm biosecurity measures"
+    ],
+    "actions": [
+      "Seek medical care—doxycycline is first-line for acute Q fever",
+      "Long-term management and specialist care for chronic Q fever (e.g., endocarditis) if present",
+      "Notify public-health authorities when occupational exposures occur"
+    ]
+  },
+  {
+    "disease": "Mycoplasma Pneumonia",
+    "symptoms": [
+      "Gradual onset cough (often persistent)",
+      "Low-grade fever",
+      "Sore throat and headache",
+      "Fatigue and malaise",
+      "Wheezing or chest tightness in some patients"
+    ],
+    "precautions": [
+      "Practice hand hygiene and respiratory etiquette",
+      "Avoid close contact with people who have respiratory infections",
+      "Maintain good ventilation in crowded settings"
+    ],
+    "actions": [
+      "Clinical assessment and chest imaging if pneumonia suspected",
+      "Macrolide or doxycycline therapy per local guidelines for symptomatic bacterial infection",
+      "Supportive care: fluids, rest, antipyretics"
+    ]
+  },
+  {
+    "disease": "Gastroenteritis",
+    "symptoms": [
+      "Diarrhea (watery or bloody depending on cause)",
+      "Nausea and vomiting",
+      "Abdominal cramps and pain",
+      "Fever and malaise",
+      "Dehydration signs: reduced urine, dry mouth, dizziness"
+    ],
+    "precautions": [
+      "Handwashing, especially after restroom use and before food preparation",
+      "Safe food handling and water sanitation",
+      "Exclude food handlers with vomiting/diarrhea from work until cleared"
+    ],
+    "actions": [
+      "Oral rehydration and electrolyte replacement",
+      "Seek medical attention for severe dehydration, bloody diarrhea, high fever, or persistent symptoms",
+      "Use antibiotics only when indicated (bacterial causes) per clinician"
+    ]
+  },
+  {
+    "disease": "Sepsis",
+    "symptoms": [
+      "Fever or hypothermia",
+      "Rapid heart rate and rapid breathing",
+      "Confusion or altered mental status",
+      "Extreme weakness or malaise",
+      "Decreased urine output",
+      "Signs of localized infection (e.g., wound redness, cough)"
+    ],
+    "precautions": [
+      "Prevent infections with hygiene, vaccination, wound care, and safe catheter practices",
+      "Timely treatment of infections to reduce progression risk",
+      "Recognize early warning signs (fever, confusion, fast breathing) and seek care quickly"
+    ],
+    "actions": [
+      "Seek emergency medical care immediately—sepsis is life-threatening",
+      "Early broad-spectrum antibiotics and IV fluids per hospital protocol",
+      "Source control (drain abscesses, remove infected devices) and organ support as needed"
+    ]
+  },
+  {
+    "disease": "Scarlet Fever",
+    "symptoms": [
+      "Sore throat and fever",
+      "Characteristic sandpaper-like rash that blanches with pressure",
+      "Strawberry tongue (red and bumpy)",
+      "Pastia's lines (red streaks in skin folds)",
+      "Peeling of skin on fingertips and toes during recovery"
+    ],
+    "precautions": [
+      "Good hand hygiene and avoid close contact with infected individuals",
+      "Exclude from school/childcare until 24 hours after starting antibiotics",
+      "Cover coughs and practice respiratory etiquette"
+    ],
+    "actions": [
+      "See clinician for throat testing and antibiotics if indicated (penicillin or amoxicillin)",
+      "Supportive care for fever and hydration",
+      "Follow-up to ensure resolution and prevent complications"
+    ]
+  },
+  {
+    "disease": "Toxic Shock Syndrome",
+    "symptoms": [
+      "Sudden high fever",
+      "Low blood pressure (dizziness, fainting)",
+      "Diffuse rash resembling sunburn, often with peeling skin",
+      "Multisystem involvement: vomiting, diarrhea, muscle aches, confusion",
+      "Organ dysfunction in severe cases"
+    ],
+    "precautions": [
+      "Follow product safety guidance for tampons and wound dressings (change frequently)",
+      "Seek prompt care for persistent fever and severe symptoms",
+      "Maintain wound hygiene and remove foreign materials promptly"
+    ],
+    "actions": [
+      "Emergency medical care is required—hemodynamic support and antibiotics",
+      "Remove any potential source (tampon, packing, infected tissue)",
+      "Monitor and support organ systems in hospital setting (ICU if needed)"
+    ]
+  },
+  {
+    "disease": "Hand-Foot-Mouth",
+    "symptoms": [
+      "Fever and sore throat",
+      "Painful mouth sores (ulcers)",
+      "Vesicular rash on palms, soles, and sometimes buttocks",
+      "Irritability and poor feeding in young children",
+      "Mild respiratory symptoms in some cases"
+    ],
+    "precautions": [
+      "Handwashing, especially after diaper changes and contact with children",
+      "Exclude symptomatic children from group settings per local guidance",
+      "Disinfect toys and surfaces in childcare settings"
+    ],
+    "actions": [
+      "Supportive care: fluids, pain relief, topical mouth rinses for ulcers",
+      "Seek care for signs of dehydration or severe illness",
+      "Follow public-health advice during outbreaks"
+    ]
+  },
+  {
+    "disease": "Japanese Encephalitis",
+    "symptoms": [
+      "Fever and headache",
+      "Neck stiffness and altered mental status in encephalitic cases",
+      "Seizures (especially in children)",
+      "Neurologic deficits and movement disorders in survivors",
+      "Often asymptomatic or mild febrile illness in most infected individuals"
+    ],
+    "precautions": [
+      "Vaccination for travelers and residents in endemic areas as recommended",
+      "Use mosquito repellents and bed nets; avoid outdoor exposure at peak mosquito times",
+      "Eliminate stagnant water and reduce mosquito breeding sites"
+    ],
+    "actions": [
+      "Seek urgent medical care for neurologic symptoms",
+      "Supportive care in hospital (management of raised intracranial pressure, seizures)",
+      "Report cases and follow public-health/ vaccination guidance"
+    ]
+  },
+  {
+    "disease": "West Nile Virus",
+    "symptoms": [
+      "Most infections asymptomatic",
+      "West Nile fever: fever, headache, body aches, nausea, fatigue",
+      "Rash on trunk in some cases",
+      "Neuroinvasive disease: meningitis or encephalitis with altered mental status, weakness, seizures",
+      "Movement disorders or paralysis in severe cases"
+    ],
+    "precautions": [
+      "Use mosquito repellent and protective clothing; eliminate standing water",
+      "Screen blood supply per local regulations",
+      "Follow public-health mosquito control measures"
+    ],
+    "actions": [
+      "Seek medical evaluation for severe neurologic symptoms",
+      "Supportive care; hospitalize for neuroinvasive disease",
+      "Report cases to public-health authorities"
+    ]
+  },
+  {
+    "disease": "Chikungunya",
+    "symptoms": [
+      "Sudden high fever",
+      "Severe joint pain (often debilitating)",
+      "Headache and muscle pain",
+      "Rash",
+      "Fatigue and joint swelling that may persist for months"
+    ],
+    "precautions": [
+      "Avoid mosquito bites (repellents, nets, protective clothing)",
+      "Eliminate mosquito breeding sites around living areas",
+      "Travelers to endemic areas should take mosquito precautions"
+    ],
+    "actions": [
+      "Supportive care: fluids, analgesics (acetaminophen) and rest",
+      "Seek medical attention for severe symptoms or prolonged arthritis",
+      "Public-health vector control during outbreaks"
+    ]
+  },
+  {
+    "disease": "Rift Valley Fever",
+    "symptoms": [
+      "Most have mild febrile illness with fever and malaise",
+      "Severe disease: hemorrhagic fever, encephalitis, or ocular disease",
+      "Muscle pain and headache in many cases",
+      "Photophobia or vision changes with ocular involvement"
+    ],
+    "precautions": [
+      "Avoid contact with infected animals or animal tissues",
+      "Use personal protective equipment when handling livestock",
+      "Control mosquitoes and animal-vector exposure in endemic settings"
+    ],
+    "actions": [
+      "Seek medical care for severe illness or hemorrhagic symptoms",
+      "Supportive hospital care for severe complications",
+      "Notify public-health and veterinary authorities for outbreak control"
+    ]
+  },
+  {
+    "disease": "Crimean-Congo Hemorrhagic Fever",
+    "symptoms": [
+      "Sudden high fever and severe headache",
+      "Muscle aches, dizziness, and neck/back pain",
+      "Nausea, vomiting, and abdominal pain",
+      "Severe bruising, bleeding from gums or nose, and widespread hemorrhagic signs in advanced disease",
+      "Organ failure in severe cases"
+    ],
+    "precautions": [
+      "Avoid tick bites with repellents and protective clothing in endemic areas",
+      "Use PPE when caring for suspected patients or handling animal tissues",
+      "Implement infection control precautions in healthcare settings"
+    ],
+    "actions": [
+      "Seek urgent medical care—supportive hospital care and strict infection control",
+      "Ribavirin may be considered in some settings; follow local guidance",
+      "Report cases to public-health authorities and implement outbreak control measures"
+    ]
+  },
+  {
+    "disease": "Marburg Virus",
+    "symptoms": [
+      "Sudden onset fever and severe headache",
+      "Muscle aches and severe malaise",
+      "Vomiting and diarrhea",
+      "Hemorrhagic manifestations (bleeding from gums, GI tract, or skin)",
+      "Shock and multi-organ failure in severe disease"
+    ],
+    "precautions": [
+      "Avoid contact with fruit bats and infected animals in endemic regions",
+      "Use strict isolation and PPE for suspected cases",
+      "Follow international and local public-health guidance for containment"
+    ],
+    "actions": [
+      "Immediate isolation and supportive care in specialized facilities",
+      "Implement strict infection control and contact tracing",
+      "Report to public-health authorities and follow outbreak response protocols"
+    ]
+  },
+  {
+    "disease": "Monkeypox",
+    "symptoms": [
+      "Fever, headache, muscle aches, and fatigue",
+      "Swollen lymph nodes (distinctive)",
+      "Rash progressing from macules to papules to vesicles and pustules",
+      "Lesions may be painful or itchy and involve face, palms, soles, and genital area",
+      "Sore throat and cough in some cases"
+    ],
+    "precautions": [
+      "Avoid close contact with infected persons and contaminated materials",
+      "Practice good hand hygiene and respiratory etiquette",
+      "Vaccination for high-risk contacts where recommended"
+    ],
+    "actions": [
+      "Isolation of suspected/confirmed cases until lesions crust and scabs fall off",
+      "Supportive care; antivirals (tecovirimat) in severe or high-risk cases per guidance",
+      "Contact tracing and public-health notification"
+    ]
+  },
+  {
+    "disease": "Avian Influenza (Bird Flu)",
+    "symptoms": [
+      "High fever and cough",
+      "Sore throat and muscle aches",
+      "Shortness of breath and severe respiratory distress in severe cases",
+      "Conjunctivitis in some avian influenza strains",
+      "Gastrointestinal symptoms occasionally"
+    ],
+    "precautions": [
+      "Avoid contact with infected poultry and follow safe handling/slaughter practices",
+      "Use PPE when working with birds; control outbreaks in poultry populations",
+      "Vaccinate poultry where indicated and follow public-health guidance"
+    ],
+    "actions": [
+      "Seek immediate medical care for suspected human avian influenza infection",
+      "Antiviral therapy (oseltamivir or per guidelines) may be considered",
+      "Report to public-health authorities and implement containment measures"
+    ]
+  },
+  {
+    "disease": "Swine Flu (H1N1)",
+    "symptoms": [
+      "Fever, cough, sore throat",
+      "Runny or stuffy nose",
+      "Body aches, headache, chills, fatigue",
+      "Vomiting and diarrhea in some cases (more common in children)"
+    ],
+    "precautions": [
+      "Annual influenza vaccination and good respiratory hygiene",
+      "Stay home if ill to avoid spreading infection",
+      "Hand hygiene and surface cleaning"
+    ],
+    "actions": [
+      "Seek medical care if severe symptoms or high-risk conditions are present",
+      "Antiviral treatment (e.g., oseltamivir) if indicated and started early",
+      "Supportive care: fluids, rest, antipyretics"
+    ]
+  },
+  {
+    "disease": "Seasonal Allergic Rhinitis (not contagious)",
+    "symptoms": [
+      "Sneezing and itchy nose",
+      "Runny or congested nose",
+      "Itchy, watery eyes",
+      "Postnasal drip and cough",
+      "Fatigue and impaired sleep in severe cases"
+    ],
+    "precautions": [
+      "Avoid known allergens (pollen, dust mites, pet dander) where possible",
+      "Use HEPA filters and keep windows closed during high pollen times",
+      "Practice nasal saline irrigation and environmental controls"
+    ],
+    "actions": [
+      "Use antihistamines, nasal corticosteroids, and allergy control measures",
+      "See an allergist for testing and immunotherapy if severe or persistent",
+      "Monitor and treat associated asthma if present"
+    ]
+  },
+  {
+    "disease": "Asthma (not contagious)",
+    "symptoms": [
+      "Wheezing and chest tightness",
+      "Shortness of breath",
+      "Cough (especially at night or with exercise)",
+      "Difficulty speaking in severe attacks",
+      "Symptoms triggered by allergens, exercise, cold air, or infections"
+    ],
+    "precautions": [
+      "Avoid known triggers and maintain an asthma action plan",
+      "Use inhaled controller medications as prescribed (e.g., inhaled corticosteroids)",
+      "Ensure good indoor air quality and smoking cessation"
+    ],
+    "actions": [
+      "Follow personalized asthma action plan and use inhalers (bronchodilators for relief)",
+      "Seek urgent care for severe exacerbations or if rescue inhaler is ineffective",
+      "Regular follow-up with healthcare provider to optimize control"
+    ]
+  }
+]
