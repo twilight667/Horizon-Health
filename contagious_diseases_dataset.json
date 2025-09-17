@@ -220,381 +220,438 @@
   {
     "disease": "Polio",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Fever",
+      "Fatigue",
+      "Headache",
+      "Vomiting",
+      "Pain in the limbs"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Vaccination"
+      
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Heat and physical therapy",
+      "Drugs are used to relax the effected muscles"
     ]
   },
   {
     "disease": "Pertussis (Whooping Cough)",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Mild fever",
+      "Runny nose",
+      "Cough"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "DTP3 containig Vaccination"
+      
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      " Antibiotics are used to treat the infection. ",
+      "Seek medical care if severe"
     ]
   },
   {
     "disease": "Tetanus",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Jaw cramping",
+      "Muscle spasms",
+      "Trouble swallowing",
+      "Seizures",
+      "Fever and sweating"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Etanus-toxoid-containing vaccines",
+      "Robust medical practices"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Treatment in a medical facility",
+      "Need to be immunized"
     ]
   },
   {
     "disease": "Diphtheria",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Mild fever",
+      "Exudative pharyngitis",
+      "Bull-neck appearance",
+      "Ulcers"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Vaccination",
+      "Wash hands",
+      "Isolation"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Seek medical care",
+      "Stay hydrated"
     ]
   },
   {
     "disease": "Typhoid Fever",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "High Fever",
+      "Fatigue",
+      "Diarrhea",
+      "Loss of appetite",
+      "Dizziness"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Wash hands",
+      "Safe water",
+      "Vaccination"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Stay hydrated",
+      "Eat light",
+      "Seek medical care"
     ]
   },
   {
     "disease": "Leprosy",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Skin smears",
+      "Reddish skin patches",
+      "Fatigue"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Personal Hygiene",
+      "Early diagnosis"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Multi-drug therapy",
+      "Monotherapy"
     ]
   },
   {
     "disease": "Plague",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "High Fever",
+      "Fatigue",
+      "Headache",
+      "Nausea"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Clean surrounding",
+      "Use repellents"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Stay hydrated",
+      "Antibiotics if prescribed",
+      "Seek medical care"
     ]
   },
   {
     "disease": "Zika Virus",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Fever",
+      "Skin rash",
+      "Conjunctivitis",
+      "Muscle and joint pain",
+      "Malaise",
+      "Headache"
     ],
     "precautions": [
-      "Precaution1",
+      "Mosquito nets",
       "Precaution2"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Seek treatment",
+      "Stay hydrated",
+      "Avoid aspirin/NSAIDs"
     ]
   },
   {
     "disease": "Ebola Virus Disease",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Fever",
+      "Fatigue",
+      "Vomiting",
+      "Diarrhea",
+      "Unexplained bleeding"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Avoid contact with body fluids",
+      "Monitor your health"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Inmazeb and ebanga",
+      "Fluids and electrolytes ",
+      "Medicine to support blood pressure"
     ]
   },
   {
     "disease": "MERS",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Fever",
+      "Cough",
+      "Shortness of breath"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Wash hands",
+      "Avoiding drinking raw camel milk or camel urine or eating meat",
+      "Avoid close contact with camel"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Seek medical care",
+      "Care to help relieve symptoms"
     ]
   },
   {
     "disease": "SARS",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "High Fever",
+      "Fatigue",
+      "Dry cough",
+      "Sore throat"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Wash hands",
+      "Wear masks",
+      "Isolation",
+      "Clean surrounding"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Stay hydrated",
+      "Seek medical care",
+      "Complete isolation"
     ]
   },
   {
     "disease": "Hantavirus",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Headache",
+      "Abdominal pain",
+      "Fever",
+      "Nausea",
+      "Blurred vision",
+      "lack of blood flow",
+      "Internal Bleeding"
+
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Minimize contact with rodents",
+      "Seal holes and gaps in your home",
+      "Clean surrounding"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Stay hydrated",
+      "Treatment for symptoms",
+      "Intubation "
     ]
   },
   {
     "disease": "Rabies",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Fever",
+      "Muscle spasms",
+      "Excess salaivation" ,
+      "Hyperactivity"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Never approach animals who appear to be sick",
+      "Vaccinate pets upto date",
+      "Wash any wounds immediately",
+      "Vaccination"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Seek medical care"
+      
     ]
   },
   {
     "disease": "Yellow Fever",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Fever",
+      "Aches and pain",
+      "Yellowing skin and eyes"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Vaccination",
+      "Mosquito nets"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Seek medical care",
+      "Avoid mosquito bite"
     ]
   },
   {
     "disease": "Lassa Fever",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Slight fever",
+      "Headache",
+      "Difficulty breathing",
+      "Facial swelling",
+      "Vomiting"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Trap rats",
+      "Wearing protective clothing",
+      "Isolating infected patients ",
+      "Clean surrounding"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      
+      "Treatment for symptoms",
+      "Rest and hydrate"
     ]
   },
   {
     "disease": "Nipah Virus",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Headache",
+      "Sore throat",
+      "Cough",
+      "Difficulty breathing",
+      "Brain swelling",
+      "seizures"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Wash hands",
+      "Avoid contact with body fluids",
+      "Avoid eating raw date palm",
+      "Avoid contact with bat,pig"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Rest and hydrate",
+      "Treatment for symptoms",
+      "Seek medical care"
     ]
   },
   {
     "disease": "Norovirus",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Diarrhea",
+      "Vomiting",
+      "Stomach pain",
+      "Body aches",
+      "Fever"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Wash hands",
+      "Clean and disinfect contaminated surfaces",
+      "Stay home when sick for 2 days"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Stay hydrated",
+      "Seek medical care"
     ]
   },
   {
     "disease": "Rotavirus",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Diarrhea",
+      "Vomiting",
+      "Fever",
+      "Stomach pain"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Wash hands",
+      "Vaccination"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Stay hydrated",
+      "Seek medical care"
     ]
   },
   {
     "disease": "Giardiasis",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Diarrhea",
+      "Nausea",
+      "Fatigue",
+      "Weight loss"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Safe water",
+      "Wash hands",
+      "Dont eat raw or uncooked food"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Rest and hydrate",
+      "Seek medical care",
+      "Eat light"
     ]
   },
   {
     "disease": "Amebiasis",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Diarrhea",
+      "Stomach pain",
+      "Stomach cramp",
+      "Bloody poop",
+      "Fever"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Safe water",
+      "Clean surrounding"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Antibiotics",
+      "Seek medical care"
     ]
   },
   {
     "disease": "Trichomoniasis",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Irritation inside the penis",
+      "Burning after peeing",
+      "soreness of the genitals"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Not to have sex",
+      "Using condoms"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Medication pills",
+      "Seek medical care"
     ]
   },
   {
     "disease": "Syphilis",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Sores usually in genital area",
+      "Rash on palm ",
+      "Fever",
+      "Sore throat",
+      "Weight loss"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Not to have sex",
+      "Using condoms"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Antibiotics",
+      "Seek medical care"
     ]
   },
   {
     "disease": "Gonorrhea",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Burning sensation when peeing",
+      "Increased vaginal discharge",
+      "Painful or swollen testicles"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Avoid sex",
+      "Using condoms"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Seek medical care if severe",
+      "Medication pills"
     ]
   },
   {
     "disease": "Chlamydia",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Burning sensation when peeing",
+      "An abnormal vaginal discharge",
+      "Penis discharge",
+      "Painful or swollen testicles"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Avoid sex",
+      "Using condoms"
     ],
     "actions": [
       "Action1",
@@ -613,88 +670,39 @@
       "Precaution2"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Seek medical care",
+      "Medication pills"
     ]
   },
   {
     "disease": "HPV Infection",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Warts ,Unusual growths ,Lumps ,Sores in genital area"
+      
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Vaccination",
+      "Get screened",
+      "Using condoms"
     ],
     "actions": [
-      "Action1",
-      "Action2"
+      "Treatment in a medical facility",
+      "Seek medical care"
     ]
   },
   {
     "disease": "Scabies",
     "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
+      "Rash between fingers,elbow,knees,peins,nipples,waist"
     ],
     "precautions": [
-      "Precaution1",
-      "Precaution2"
+      "Avoid direct skin-to-skin contact with infected person ",
+      "Avoid sharing items such as clothing or bedding with infected person"
     ],
     "actions": [
-      "Action1",
-      "Action2"
-    ]
-  },
-  {
-    "disease": "Ringworm",
-    "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
-    ],
-    "precautions": [
-      "Precaution1",
-      "Precaution2"
-    ],
-    "actions": [
-      "Action1",
-      "Action2"
-    ]
-  },
-  {
-    "disease": "Athlete\u2019s Foot",
-    "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
-    ],
-    "precautions": [
-      "Precaution1",
-      "Precaution2"
-    ],
-    "actions": [
-      "Action1",
-      "Action2"
-    ]
-  },
-  {
-    "disease": "Hand, Foot and Mouth Disease",
-    "symptoms": [
-      "Symptom1",
-      "Symptom2",
-      "Symptom3"
-    ],
-    "precautions": [
-      "Precaution1",
-      "Precaution2"
-    ],
-    "actions": [
-      "Action1",
-      "Action2"
+      "Prescribed cream, lotion, or pill",
+      "scabicides",
+      "Retreatment if necessary"
     ]
   },
   {

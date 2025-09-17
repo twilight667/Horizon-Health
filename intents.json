@@ -17,7 +17,8 @@
         "indications of *",
         "how does * start",
         "how can * affect me", 
-        "what should I look for if I have *"
+        "what should I look for if I have *",
+        "tell me about * symptoms"
       ]
     },
     {
@@ -33,7 +34,7 @@
         "how do I avoid *",
         "measures against *",
         "safety tips for *",
-        "methods of prevention against*"
+        "methods of prevention against *"
       ]
     },
     {
@@ -41,7 +42,10 @@
       "patterns": [
         "what to do if I have *",
         "treatment for *",
+        "what are the signs i have *",
         "possible cure for *",
+        "remedies for *",
+        "steps to take to reduce effects of *",
         "how do i cure myself of *",
         "Ways to cure *",
         "how to manage *",
@@ -59,11 +63,13 @@
         "hello",
         "hi",
         "hey",
+        "how are you",
         "how are you today",
         "nice to meet you",
         "good morning",
         "good evening",
         "hi there",
+        "good afternoon",
         "greetings"
       ]
     },
@@ -76,7 +82,9 @@
         "quit",
         "bye bye",
         "talk to you later",
-        "exit"
+        "exit",
+        "see you soon",
+        "see you"
       ]
     },
     {
@@ -88,7 +96,11 @@
         "what should i ask",
         "repeat please",
         "could you please repeat that",
-        "i need help"
+        "i need help",
+        "Could you explain in further detail",
+        "could you repeat that",
+        "what do you mean",
+        "can you expand on that" 
       ]
     }
   ]
