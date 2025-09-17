@@ -20,9 +20,10 @@ health-chatbot/
 │
 ├── data/
 │   └── intents.json      # Intent definitions (patterns + tags)
+│   └── contagious_diseases_dataset.json      # Diseases Dataset
 │
-├── chatbot.py            # Main chatbot logic
-├── nlp_utils.py          # Preprocessing + intent detection
+├── AI_chatbotProject1.py            # Main chatbot logic
+├── NLP.py          # Preprocessing + intent detection
 │
 ├── README.md             # Project documentation
 ```
