@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthBot - Your AI Health Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f7ff;
+        }
+        .chat-container {
+            height: calc(100vh - 180px);
+        }
+        .message {
+            max-width: 80%;
+        }
+        .typing-indicator span {
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+        .typing-indicator span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .typing-indicator span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Chat History Modal -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" id="historyModal">
+        <div class="bg-white rounded-xl p-6 w-full max-w-md max-h-[80vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold">Chat History</h3>
+                <button onclick="document.getElementById('historyModal').classList.add('hidden')" class="text-gray-500 hover:text-gray-700">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <div id="historyList" class="space-y-2">
+                <!-- History items will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme Selector - Now full screen and mandatory -->
+    <div class="theme-selector fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50" id="themeSelector">
+        <div class="theme-options max-w-3xl w-full p-8 bg-white rounded-xl shadow-2xl">
+            <h2 class="text-3xl font-bold mb-8 text-center">Welcome to Horizon HealthBot!</h2>
+            <p class="text-center mb-8 text-gray-600">Please choose your preferred theme to continue.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <button onclick="setTheme('light')" class="p-6 border-2 border-gray-200 rounded-full hover:border-blue-500 transition-all duration-300 transform hover:scale-105 flex flex-col items-center">
+                    <div class="bg-white p-2 rounded-full mb-2 w-24 h-24 flex items-center justify-center">
+                        <div class="h-20 w-20 bg-gray-100 rounded-full"></div>
+                    </div>
+                    <span>Light Theme</span>
+                </button>
+                <button onclick="setTheme('dark')" class="p-6 border-2 border-gray-200 rounded-full hover:border-gray-700 transition-all duration-300 transform hover:scale-105 flex flex-col items-center">
+                    <div class="bg-gray-800 p-2 rounded-full mb-2 w-24 h-24 flex items-center justify-center">
+                        <div class="h-20 w-20 bg-gray-900 rounded-full"></div>
+                    </div>
+                    <span>Dark Theme</span>
+                </button>
+                <button onclick="setTheme('multicolor')" class="p-6 border-2 border-gray-200 rounded-full hover:border-pink-500 transition-all duration-300 transform hover:scale-105 flex flex-col items-center">
+                    <div class="bg-gradient-to-r from-pink-500 to-orange-500 p-2 rounded-full mb-2 w-24 h-24 flex items-center justify-center">
+                        <div class="h-20 w-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                    </div>
+                    <span>Multicolor Theme</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header bg-blue-600 text-white py-4 px-6 shadow-md">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-white p-2 rounded-full">
+                    <i data-feather="heart" class="text-blue-600 w-6 h-6"></i>
+                </div>
+                <h1 class="text-xl font-bold">HealthBot</h1>
+            </div>
+            <div class="flex items-center space-x-3">
+                <button onclick="showChatHistory()" class="bg-white text-blue-600 p-2 rounded-full hover:bg-blue-50 transition">
+                    <i data-feather="clock" class="w-5 h-5"></i>
+                </button>
+                <button onclick="document.getElementById('themeSelector').style.display = 'flex';" class="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-blue-50 transition">
+                    Change Theme
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Chat Container -->
+    <div class="container mx-auto px-4 py-6 flex-1 flex flex-col chat-container overflow-y-auto">
+        <!-- Welcome Message -->
+        <div class="flex justify-start mb-6">
+            <div class="bg-white rounded-lg p-4 shadow message">
+                <div class="flex items-center mb-2">
+                    <div class="bg-blue-100 p-2 rounded-full mr-3">
+                        <i data-feather="heart" class="text-blue-600 w-4 h-4"></i>
+                    </div>
+                    <span class="font-semibold text-blue-600">HealthBot</span>
+                </div>
+                <p class="text-white-700">Hello! I'm your AI health assistant. I can provide general health information, symptom checking, and wellness tips. Remember, I'm not a doctor, but I can help guide you.</p>
+                <p class="text-whit
+                e-700 mt-2 font-medium">Today's Health Tip: Drinking a glass of water first thing in the morning helps kickstart your metabolism and rehydrate your body after sleep.</p>
+                <p class="text-white-700 mt-2">Please enter your health-related question below to get started.</p>
+            </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="flex justify-start mb-6 hidden" id="typingIndicator">
+            <div class="bg-white rounded-lg p-4 shadow message">
+                <div class="flex items-center">
+                    <div class="bg-blue-100 p-2 rounded-full mr-3">
+                        <i data-feather="heart" class="text-blue-600 w-4 h-4"></i>
+                    </div>
+                    <div class="typing-indicator flex space-x-1">
+                        <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+                        <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+                        <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Input Area -->
+    <div class="bg-white border-t border-gray-200 py-4 px-6">
+        <div class="container mx-auto">
+            <form id="chatForm" class="flex items-center space-x-3">
+                <input type="text" id="userInput" placeholder="Type your health question here..." 
+                       class="flex-1 border border-gray-300 rounded-full py-3 px-5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <button type="submit" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+                    <i data-feather="send" class="w-5 h-5"></i>
+                </button>
+            </form>
+            <p class="text-xs text-gray-500 mt-2 text-center">HealthBot provides general information only. For medical advice, please consult a doctor.</p>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+        
+        // Theme handling
+        function setTheme(theme) {
+            document.body.className = `min-h-screen flex flex-col theme-${theme}`;
+            document.getElementById('themeSelector').style.display = 'none';
+            document.querySelector('header').style.display = 'flex';
+            document.querySelector('.chat-container').style.display = 'flex';
+            document.querySelector('.bg-white.border-t').style.display = 'block';
+            localStorage.setItem('healthbot-theme', theme);
+            
+            // Apply theme colors to chat elements
+            const themeClasses = {
+                light: {
+                    body: 'bg-white',
+                    header: 'bg-blue-600 text-white',
+                    botMessage: 'bg-gray-100 text-gray-800',
+                    userMessage: 'bg-blue-600 text-white',
+                    buttons: {
+                        precautions: 'bg-blue-100 text-blue-600 hover:bg-blue-200',
+                        remedies: 'bg-green-100 text-green-600 hover:bg-green-200'
+                    },
+                    input: 'bg-white border-gray-300'
+                },
+                dark: {
+                    body: 'bg-black',
+                    header: 'bg-black text-white border-b border-gray-800',
+                    botMessage: 'bg-black text-white border border-gray-800',
+                    userMessage: 'bg-white text-black',
+                    buttons: {
+                        precautions: 'bg-white text-black hover:bg-gray-200 border border-gray-800',
+                        remedies: 'bg-white text-black hover:bg-gray-200 border border-gray-800'
+                    },
+                    input: 'bg-black border-gray-800 text-white'
+                },
+                multicolor: {
+                    body: 'bg-gradient-to-br from-pink-100 to-blue-100',
+                    header: 'bg-gradient-to-r from-purple-600 to-pink-600 text-white',
+                    botMessage: 'bg-gradient-to-r from-blue-50 to-purple-50 text-gray-800',
+                    userMessage: 'bg-gradient-to-r from-blue-500 to-purple-500 text-white',
+                    buttons: {
+                        precautions: 'bg-gradient-to-r from-blue-100 to-purple-100 text-blue-600 hover:from-blue-200 hover:to-purple-200',
+                        remedies: 'bg-gradient-to-r from-green-100 to-teal-100 text-green-600 hover:from-green-200 hover:to-teal-200'
+                    },
+                    input: 'bg-white border-gray-300'
+                }
+            };
+
+            // Apply theme to existing elements
+            document.body.className = `min-h-screen flex flex-col ${themeClasses[theme].body}`;
+            document.querySelector('header').className = `header ${themeClasses[theme].header} py-4 px-6 shadow-md`;
+            document.getElementById('userInput').className = `flex-1 border ${themeClasses[theme].input} rounded-full py-3 px-5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent`;
+            
+            // Update existing messages
+            document.querySelectorAll('.message').forEach(msg => {
+                if (msg.classList.contains('theme-user')) {
+                    msg.className = `bg-blue-600 text-white rounded-lg p-4 shadow message theme-user ${themeClasses[theme].userMessage}`;
+                } else {
+                    msg.className = `rounded-lg p-4 shadow message ${themeClasses[theme].botMessage}`;
+                }
+            });
+
+            // Update action buttons
+            document.querySelectorAll('.action-btn').forEach(btn => {
+                if (btn.textContent.includes('Precautions')) {
+                    btn.className = `action-btn ${themeClasses[theme].buttons.precautions} px-4 py-2 rounded-full text-sm font-medium transition`;
+                } else {
+                    btn.className = `action-btn ${themeClasses[theme].buttons.remedies} px-4 py-2 rounded-full text-sm font-medium transition`;
+                }
+            });
+        }
+
+        // Chat history storage
+        let chatHistory = JSON.parse(localStorage.getItem('healthbot-history')) || [];
+
+        // Show chat history modal
+        function showChatHistory() {
+            const historyList = document.getElementById('historyList');
+            historyList.innerHTML = chatHistory.length > 0 
+                ? chatHistory.map((item, index) => `
+                    <div class="p-3 border border-gray-200 rounded-lg">
+                        <p class="font-medium">${item.question}</p>
+                        <p class="text-sm text-gray-500 truncate">${item.response.substring(0, 50)}...</p>
+                    </div>
+                `).join('')
+                : '<p class="text-gray-500 text-center py-4">No searches made</p>';
+            
+            document.getElementById('historyModal').classList.remove('hidden');
+            feather.replace();
+        }
+
+        // Check if theme is already selected
+        const savedTheme = localStorage.getItem('healthbot-theme');
+        if (savedTheme) {
+            setTheme(savedTheme);
+            document.getElementById('themeSelector').style.display = 'none';
+        } else {
+            // Hide chat interface until theme is selected
+            document.querySelector('header').style.display = 'none';
+            document.querySelector('.chat-container').style.display = 'none';
+            document.querySelector('.bg-white.border-t').style.display = 'none';
+            
+            // Show theme selector and hide chat until theme is selected
+            document.getElementById('themeSelector').style.display = 'flex';
+        }
+
+        // Daily health tips (rotated based on day of month)
+        const dailyHealthTips = [
+            "Start your day with a healthy breakfast to fuel your body and mind.",
+            "Take short breaks every hour if you sit for long periods to improve circulation.",
+            "Aim for 7-9 hours of quality sleep each night for optimal health.",
+            "Practice deep breathing exercises to reduce stress and improve focus.",
+            "Include colorful vegetables in your meals for a variety of nutrients.",
+            "Stay hydrated by drinking water throughout the day.",
+            "Take a 30-minute walk daily to boost cardiovascular health.",
+            "Stretch regularly to maintain flexibility and prevent muscle stiffness.",
+            "Limit processed foods and opt for whole, natural foods instead.",
+            "Wash your hands frequently to prevent the spread of germs.",
+            "Practice good posture to prevent back and neck pain.",
+            "Get some sunlight daily for vitamin D, but use sunscreen.",
+            "Floss your teeth daily for better oral health.",
+            "Limit screen time before bed to improve sleep quality.",
+            "Keep healthy snacks like nuts and fruits readily available.",
+            "Laugh often - it reduces stress and boosts immunity.",
+            "Practice gratitude daily for better mental wellbeing.",
+            "Use stairs instead of elevators when possible for extra activity.",
+            "Try meditation for 5-10 minutes daily to calm your mind.",
+            "Eat slowly and mindfully to improve digestion.",
+            "Wear comfortable shoes that support your feet properly.",
+            "Limit caffeine intake in the afternoon for better sleep.",
+            "Keep a regular sleep schedule, even on weekends.",
+            "Stand up and move around every 30 minutes if you sit a lot.",
+            "Use a smaller plate to help control portion sizes.",
+            "Try a new healthy recipe each week to keep meals interesting.",
+            "Keep a water bottle with you to stay hydrated throughout the day.",
+            "Take time to disconnect from technology and relax.",
+            "Practice positive self-talk to boost your mood and confidence.",
+            "Get regular health check-ups and screenings as recommended.",
+            "Make time for hobbies and activities you enjoy to reduce stress."
+        ];
+
+        // Sample health responses with follow-up questions
+        const healthResponses = {
+            "symptoms of flu": "Common flu symptoms include fever, cough, sore throat, runny or stuffy nose, body aches, headache, chills, and fatigue. Some people may have vomiting and diarrhea. Symptoms usually appear suddenly.",
+            "how to lower blood pressure": "To help lower blood pressure naturally: 1) Eat a healthy diet low in salt, 2) Exercise regularly, 3) Maintain a healthy weight, 4) Limit alcohol, 5) Reduce stress, 6) Quit smoking, 7) Get enough sleep. Always consult your doctor before making changes.",
+            "signs of dehydration": "Signs of dehydration include: thirst, dry mouth, fatigue, dizziness, less frequent urination, dark-colored urine, dry skin, headache, and in severe cases, confusion or fainting. Drink water regularly to stay hydrated.",
+            "how much water should i drink": "The general recommendation is about 15.5 cups (3.7 liters) of fluids a day for men and about 11.5 cups (2.7 liters) for women. This includes all beverages and water-rich foods. Needs vary based on activity level, climate, and health.",
+            "what is a healthy diet": "A healthy diet includes: fruits, vegetables, whole grains, lean proteins (fish, poultry, beans), and healthy fats (avocados, nuts, olive oil). Limit processed foods, added sugars, and excessive salt. Balance is key for proper nutrition.",
+            "how to relieve stress": "Stress relief techniques include: 1) Deep breathing exercises, 2) Regular physical activity, 3) Meditation or mindfulness, 4) Getting enough sleep, 5) Connecting with loved ones, 6) Time management, 7) Limiting caffeine and alcohol, 8) Taking breaks when needed.",
+            "flu prevention": "For flu prevention: 1) Get annual flu vaccine, 2) Wash hands frequently, 3) Avoid touching face, 4) Disinfect surfaces, 5) Avoid close contact with sick people, 6) Boost immunity with healthy diet and sleep.",
+            "foods that lower blood pressure": "Foods that may help lower BP: 1) Leafy greens (high in potassium), 2) Berries (flavonoids), 3) Beets (nitrates), 4) Oats (fiber), 5) Bananas (potassium), 6) Fatty fish (omega-3s), 7) Garlic, 8) Dark chocolate (flavonoids).",
+            "staying hydrated": "Tips for staying hydrated: 1) Carry a water bottle, 2) Set hourly reminders, 3) Flavor water with fruits, 4) Eat water-rich foods (cucumber, watermelon), 5) Monitor urine color, 6) Drink before feeling thirsty.",
+            "meal plan suggestions": "Sample healthy meal plan: Breakfast - Oatmeal with berries; Lunch - Grilled chicken salad; Snack - Greek yogurt with nuts; Dinner - Salmon with quinoa and veggies. Adjust portions based on your needs.",
+            "meditation techniques": "Simple meditation techniques: 1) Focus on breath, 2) Body scan (focus on each body part), 3) Mantra repetition, 4) Guided visualization, 5) Walking meditation. Start with 5 minutes daily.",
+            "symptoms of covid-19":"COVID-19 typically presents with symptoms such as fever, a persistent dry cough, and fatigue. Many people also experience a loss of taste or smell, and in more severe cases, it can cause difficulty breathing, which requires urgent medical attention.",
+            "symptoms of brain tumor": "Brain tumors can cause headaches, seizures, nausea, vision problems, and changes in personality or memory. Symptoms vary depending on the tumor’s size and location in the brain.",
+            "signs of rabies": "Rabies initially causes fever, headache, and weakness, followed by anxiety, confusion, difficulty swallowing, paralysis, and ultimately death if untreated.",
+            "default": "I'm sorry, I can only answer health-related questions. Could you please ask me something about health, symptoms, nutrition, or general wellness? Remember, for serious medical concerns, please consult a healthcare professional."
+        };
+
+        const chatForm = document.getElementById('chatForm');
+        const userInput = document.getElementById('userInput');
+        const chatContainer = document.querySelector('.chat-container');
+        const typingIndicator = document.getElementById('typingIndicator');
+
+        chatForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const question = userInput.value.trim().toLowerCase();
+            
+            if (question) {
+                // Add user message to chat
+                addMessage(question, 'user');
+                userInput.value = '';
+                
+                // Show typing indicator
+                typingIndicator.classList.remove('hidden');
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+                
+                // Simulate bot thinking
+                setTimeout(() => {
+                    typingIndicator.classList.add('hidden');
+                    
+                    // Find appropriate response
+                    let response = healthResponses.default;
+                    for (const key in healthResponses) {
+                        if (question.includes(key)) {
+                            response = healthResponses[key];
+                            break;
+                        }
+                    }
+                    
+                    // Add bot response with action buttons
+                    addMessage(response, 'bot', question);
+                    
+                    // Save to history
+                    chatHistory.unshift({
+                        question: question,
+                        response: response,
+                        timestamp: new Date().toISOString()
+                    });
+                    localStorage.setItem('healthbot-history', JSON.stringify(chatHistory));
+                    
+                }, 1500);
+            }
+        });
+
+        // Action responses
+        const actionResponses = {
+            "symptoms of flu": {
+                precautions: "Precautions for flu: 1) Get vaccinated annually, 2) Wash hands frequently, 3) Avoid close contact with sick people, 4) Cover coughs/sneezes, 5) Disinfect surfaces regularly, 6) Stay home when sick to prevent spreading.",
+                remedies: "Flu remedies: 1) Rest and sleep, 2) Stay hydrated, 3) Use over-the-counter meds for symptoms (consult doctor), 4) Use a humidifier, 5) Try warm salt water gargle for sore throat, 6) Use honey for cough (not for infants)."
+            },
+            "how to lower blood pressure": {
+                precautions: "Blood pressure precautions: 1) Monitor regularly, 2) Limit sodium intake, 3) Avoid excessive alcohol, 4) Manage stress, 5) Don't smoke, 6) Be cautious with OTC meds (some can raise BP), 7) Follow doctor's advice.",
+                remedies: "BP remedies: 1) DASH diet (fruits, veggies, low-fat dairy), 2) Potassium-rich foods, 3) Regular aerobic exercise, 4) Meditation/relaxation techniques, 5) Dark chocolate (in moderation), 6) Hibiscus tea may help."
+            },
+            "signs of dehydration": {
+                precautions: "Dehydration precautions: 1) Drink before feeling thirsty, 2) Increase fluids in hot weather/exercise, 3) Monitor urine color (pale is good), 4) Limit diuretics (caffeine/alcohol), 5) Eat water-rich foods.",
+                remedies: "Dehydration remedies: 1) Sip water gradually, 2) Oral rehydration solutions, 3) Coconut water, 4) Eat fruits like watermelon, 5) Avoid sugary drinks, 6) Rest in cool place. Severe cases need medical attention."
+            },
+            "default": {
+                precautions: "General health precautions: 1) Regular check-ups, 2) Balanced diet, 3) Exercise, 4) Good hygiene, 5) Stress management, 6) Adequate sleep, 7) Avoid harmful habits.",
+                remedies: "General health remedies: 1) Stay hydrated, 2) Eat whole foods, 3) Herbal teas, 4) Warm baths for relaxation, 5) Deep breathing exercises, 6) Quality sleep."
+            },
+            "flu prevention": {
+                precautions: "Additional flu precautions: 1) Avoid crowded places during flu season, 2) Don't share personal items, 3) Boost vitamin D levels, 4) Consider zinc supplements (consult doctor), 5) Keep immune system strong.",
+                remedies: "If you get flu despite prevention: 1) Antiviral medications (if prescribed), 2) Rest, 3) Stay hydrated, 4) Use humidifier, 5) Over-the-counter symptom relief, 6) Chicken soup may help."
+            },
+            "foods that lower blood pressure": {
+                precautions: "Food precautions: 1) Watch portion sizes, 2) Limit added sugars, 3) Avoid processed meats, 4) Be mindful of food-drug interactions, 5) Consult nutritionist for personalized plan.",
+                remedies: "Additional food remedies: 1) Hibiscus tea, 2) Pomegranate juice, 3) Celery, 4) Pistachios, 5) Olive oil, 6) Low-fat dairy, 7) Whole grains."
+            },
+            "staying hydrated": {
+                precautions: "Hydration precautions: 1) Don't overhydrate (can cause hyponatremia), 2) Increase fluids when sick, 3) Monitor hydration in elderly/children, 4) Adjust for hot weather/exercise, 5) Watch for signs of overhydration.",
+                remedies: "Hydration boosters: 1) Coconut water, 2) Electrolyte solutions, 3) Herbal teas, 4) Watermelon, 5) Cucumber, 6) Citrus fruits, 7) Homemade sports drinks."
+            },
+            "symptoms of covid-19": {
+                precautions:"To reduce the risk of catching or spreading COVID-19, it is important to wear masks in public places, wash your hands regularly with soap and water, maintain physical distancing from others, and get vaccinated as soon as you are eligible.",
+                remedies: "If you contract COVID-19, getting plenty of rest and staying well hydrated are essential to recovery. Over-the-counter medications like acetaminophen can help alleviate fever and body aches, but if you experience severe symptoms, especially trouble breathing, seek medical care immediately."
+            },
+            "symptoms of brain tumor": {
+                precautions: "While many brain tumors can’t be prevented, avoiding exposure to radiation and harmful chemicals, and maintaining a healthy lifestyle may reduce risk.",
+                remedies: "Treatment depends on the tumor type and may include surgery, radiation therapy, chemotherapy, or targeted drug therapy. Early diagnosis and regular medical follow-ups are important."
+            },
+            "signs of rabies": {
+                precautions: "To prevent rabies, avoid contact with wild or stray animals, vaccinate pets, and seek immediate medical attention after any animal bite or scratch.",
+                remedies: "Once symptoms appear, rabies is almost always fatal, but prompt post-exposure prophylaxis (PEP) with rabies vaccine and immunoglobulin after a bite can prevent the disease."
+            }
+        };
+
+        function addMessage(text, sender, question = '') {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('flex', 'mb-6');
+            const currentTheme = localStorage.getItem('healthbot-theme') || 'light';
+            
+            const themeClasses = {
+                light: {
+                    user: 'bg-blue-600 text-white',
+                    bot: 'bg-white text-gray-800',
+                    icon: 'bg-blue-100 text-blue-600',
+                    text: 'text-gray-700',
+                    name: 'text-blue-600',
+                    buttons: {
+                        precautions: 'bg-blue-100 text-blue-600 hover:bg-blue-200',
+                        remedies: 'bg-green-100 text-green-600 hover:bg-green-200'
+                    }
+                },
+                dark: {
+                    user: 'bg-white text-black',
+                    bot: 'bg-black text-white border border-gray-800',
+                    icon: 'bg-white text-black',
+                    text: 'text-white',
+                    name: 'text-white',
+                    buttons: {
+                        precautions: 'bg-white text-black hover:bg-gray-200 border border-gray-800',
+                        remedies: 'bg-white text-black hover:bg-gray-200 border border-gray-800'
+                    }
+                },
+                multicolor: {
+                    user: 'bg-gradient-to-r from-blue-500 to-purple-500 text-white',
+                    bot: 'bg-gradient-to-r from-blue-50 to-purple-50 text-gray-800',
+                    icon: 'bg-gradient-to-r from-blue-100 to-purple-100 text-blue-600',
+                    text: 'text-gray-800',
+                    name: 'text-blue-600',
+                    buttons: {
+                        precautions: 'bg-gradient-to-r from-blue-100 to-purple-100 text-blue-600 hover:from-blue-200 hover:to-purple-200',
+                        remedies: 'bg-gradient-to-r from-green-100 to-teal-100 text-green-600 hover:from-green-200 hover:to-teal-200'
+                    }
+                }
+            };
+            
+            if (sender === 'user') {
+                messageDiv.classList.add('justify-end');
+                messageDiv.innerHTML = `
+                    <div class="${themeClasses[currentTheme].user} rounded-lg p-4 shadow message theme-user">
+                        <p>${text}</p>
+                    </div>
+                `;
+            } else {
+                messageDiv.classList.add('justify-start');
+                let buttonsHTML = '';
+                
+                if (question && !text.includes("Today's Health Tip")) {
+                    buttonsHTML = `
+                        <div class="flex space-x-3 mt-3">
+                            <button onclick="showActionResponse('${question}', 'precautions')" class="action-btn ${themeClasses[currentTheme].buttons.precautions} px-4 py-2 rounded-full text-sm font-medium transition">
+                                Precautions
+                            </button>
+                            <button onclick="showActionResponse('${question}', 'remedies')" class="action-btn ${themeClasses[currentTheme].buttons.remedies} px-4 py-2 rounded-full text-sm font-medium transition">
+                                Remedies
+                            </button>
+                        </div>
+                    `;
+                    
+                }
+
+                messageDiv.innerHTML = `
+                    <div class="${themeClasses[currentTheme].bot} rounded-lg p-4 shadow message">
+                        <div class="flex items-center mb-2">
+                            <div class="${themeClasses[currentTheme].icon} p-2 rounded-full mr-3">
+                                <i data-feather="heart" class="w-4 h-4"></i>
+                            </div>
+                            <span class="font-semibold ${themeClasses[currentTheme].name}">HealthBot</span>
+                        </div>
+                        <p class="${themeClasses[currentTheme].text}">${text}</p>
+                        ${buttonsHTML}
+                    </div>
+                `;
+            }
+            
+            chatContainer.insertBefore(messageDiv, typingIndicator);
+            feather.replace();
+            // Scroll to bottom after message is rendered
+            setTimeout(() => {
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }, 50);
+            
+        }
+
+        function showActionResponse(question, actionType) {
+            // Update history with action response
+            const historyItem = chatHistory.find(item => item.question === question);
+            if (historyItem) {
+                historyItem.response += `\n\n${actionType.charAt(0).toUpperCase() + actionType.slice(1)}:\n${actionResponses[question]?.[actionType] || actionResponses.default[actionType]}`;
+                localStorage.setItem('healthbot-history', JSON.stringify(chatHistory));
+            }
+            // Find appropriate response
+            let response = actionResponses.default[actionType];
+            for (const key in actionResponses) {
+                if (question.includes(key)) {
+                    response = actionResponses[key][actionType];
+                    break;
+                }
+            }
+            
+            // Add bot response with current theme
+            const currentTheme = localStorage.getItem('healthbot-theme') || 'light';
+            const themeClasses = {
+                light: {
+                    bot: 'bg-white text-gray-800',
+                    icon: 'bg-blue-100 text-blue-600',
+                    text: 'text-gray-700',
+                    name: 'text-blue-600'
+                },
+                dark: {
+                    bot: 'bg-black text-white border border-gray-800',
+                    icon: 'bg-white text-black',
+                    text: 'text-white',
+                    name: 'text-white'
+                },
+                multicolor: {
+                    bot: 'bg-gradient-to-r from-blue-50 to-purple-50 text-gray-800',
+                    icon: 'bg-gradient-to-r from-blue-100 to-purple-100 text-blue-600',
+                    text: 'text-gray-800',
+                    name: 'text-blue-600'
+                }
+            };
+
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('flex', 'mb-6', 'justify-start');
+            messageDiv.innerHTML = `
+                <div class="${themeClasses[currentTheme].bot} rounded-lg p-4 shadow message follow-up-shown">
+                    <div class="flex items-center mb-2">
+                        <div class="${themeClasses[currentTheme].icon} p-2 rounded-full mr-3">
+                            <i data-feather="heart" class="w-4 h-4"></i>
+                        </div>
+                        <span class="font-semibold ${themeClasses[currentTheme].name}">HealthBot</span>
+                    </div>
+                    <p class="${themeClasses[currentTheme].text}">${response}</p>
+                </div>
+            `;
+            
+            chatContainer.insertBefore(messageDiv, typingIndicator);
+            feather.replace();
+            // Scroll to bottom after message is rendered
+            setTimeout(() => {
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }, 50);
+        }
+    </script>
+</body>
+</html>
