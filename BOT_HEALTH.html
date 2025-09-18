@@ -1,0 +1,53 @@
+<script>
+    feather.replace();
+
+    const chatForm = document.getElementById('chatForm');
+    const userInput = document.getElementById('userInput');
+    const chatContainer = document.querySelector('.chat-container');
+    const typingIndicator = document.getElementById('typingIndicator');
+
+    function addMessage(text, sender = 'bot') {
+        const wrapper = document.createElement('div');
+        wrapper.className = `flex ${sender === 'user' ? 'justify-end' : 'justify-start'} mb-6`;
+
+        wrapper.innerHTML = `
+            <div class="${sender === 'user'
+                ? 'bg-blue-600 text-white'
+                : 'bg-white text-gray-800'} rounded-lg p-4 shadow message theme-${sender}">
+                ${text}
+            </div>
+        `;
+        chatContainer.appendChild(wrapper);
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    chatForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const question = userInput.value.trim();
+        
+        if (!question) return;
+
+        // Show user message
+        addMessage(question, 'user');
+        userInput.value = '';
+
+        // Show typing
+        typingIndicator.classList.remove('hidden');
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+
+        try {
+            const res = await fetch('/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: question })
+            });
+
+            const data = await res.json();
+            typingIndicator.classList.add('hidden');
+            addMessage(data.response, 'bot');
+        } catch (err) {
+            typingIndicator.classList.add('hidden');
+            addMessage("⚠️ Error connecting to server.", 'bot');
+        }
+    });
+</script>
