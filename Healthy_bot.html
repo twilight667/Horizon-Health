@@ -1,143 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizon Health Chatbot</title>
-    <!-- Use Tailwind CSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Use Google Font: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Horizon Health Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    h1 {
+      margin: 20px;
+    }
+
+    /* Theme dropdown + history button container */
+    #topBar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    #chatbox {
+      width: 90%;
+      max-width: 600px;
+      height: 60vh;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow-y: auto;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .user {
+      text-align: right;
+      color: #0078d7;
+      margin: 5px;
+    }
+
+    .bot {
+      text-align: left;
+      color: #333;
+      margin: 5px;
+    }
+
+    #controls {
+      width: 90%;
+      max-width: 600px;
+      display: flex;
+      gap: 5px;
+    }
+
+    #userInput {
+      flex: 1;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #sendBtn {
+      background: #0078d7;
+      color: white;
+    }
+    #sendBtn:hover {
+      background: #005fa3;
+    }
+
+    /* History panel */
+    #historyPanel {
+      position: fixed;
+      top: 60px;
+      right: -320px;
+      width: 300px;
+      height: 80vh;
+      background: #fff;
+      border-left: 2px solid #ccc;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+      overflow-y: auto;
+      padding: 10px;
+      transition: right 0.3s;
+      z-index: 1000;
+    }
+
+    #historyPanel.active {
+      right: 10px;
+    }
+
+    .history-entry {
+      padding: 6px;
+      border-bottom: 1px solid #eee;
+      font-size: 0.9em;
+    }
+
+    /* Themes */
+    body.light { background: #f9f9f9; color: #111; }
+    body.dark { background: #1e1e1e; color: #f0f0f0; }
+    body.dark #chatbox { background: rgba(40,40,40,0.9); border-color: #444; }
+    body.colorful { background: linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb,#a1c4fd); color:#111; }
+
+    #themeSelector {
+      padding: 6px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    #historyBtn {
+      background: #28a745;
+      color: white;
+    }
+    #historyBtn:hover {
+      background: #1e7e34;
+    }
+  </style>
 </head>
-<body class="flex items-center justify-center min-h-screen p-4">
+<body class="light">
+  <h1>🩺 Horizon Health Chatbot</h1>
 
-    <div class="flex flex-col w-full max-w-2xl bg-white rounded-xl shadow-lg overflow-hidden">
-        <!-- Chatbot Header -->
-        <div class="flex items-center justify-between p-4 bg-indigo-600 text-white rounded-t-xl">
-            <h1 class="text-2xl font-bold flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9 10h.01M15 10h.01M10 15h4M12 22a10 10 0 01-8.5-4.8 10.98 10.98 0 008.5 4.8z"/>
-                </svg>
-                Horizon Health Chatbot
-            </h1>
-        </div>
+  <div id="topBar">
+    <label for="themeSelector">Theme:</label>
+    <select id="themeSelector">
+      <option value="light" selected>Light</option>
+      <option value="dark">Dark</option>
+      <option value="colorful">Colorful</option>
+    </select>
+    <button id="historyBtn">📜 History</button>
+  </div>
 
-        <!-- Chat History -->
-        <div id="chat-history" class="flex-grow p-4 space-y-4 overflow-y-auto h-96">
-            <!-- Initial bot message -->
-            <div class="flex justify-start">
-                <div class="bg-gray-200 text-gray-800 p-3 rounded-lg max-w-[80%] shadow-sm">
-                    Hello! I'm your health chatbot. Ask me about any disease, its symptoms, precautions, or actions.
-                </div>
-            </div>
-        </div>
+  <div id="chatbox"></div>
 
-        <!-- Input Form -->
-        <div class="p-4 bg-gray-100 border-t border-gray-200">
-            <form id="chat-form" class="flex items-center">
-                <input
-                    type="text"
-                    id="user-input"
-                    class="flex-grow p-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
-                    placeholder="Type your message here..."
-                    autocomplete="off"
-                />
-                <button
-                    type="submit"
-                    id="send-button"
-                    class="px-6 py-3 bg-indigo-600 text-white rounded-r-lg hover:bg-indigo-700 transition-colors duration-200"
-                >
-                    Send
-                </button>
-            </form>
-        </div>
-    </div>
+  <div id="controls">
+    <input type="text" id="userInput" placeholder="Type a message..." />
+    <button id="sendBtn">Send</button>
+  </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const chatForm = document.getElementById('chat-form');
-            const userInput = document.getElementById('user-input');
-            const chatHistory = document.getElementById('chat-history');
-            const sendButton = document.getElementById('send-button');
+  <!-- Slide-out history panel -->
+  <div id="historyPanel">
+    <h3>Chat History</h3>
+    <div id="historyContent"></div>
+  </div>
 
-            const addMessage = (sender, text) => {
-                const messageDiv = document.createElement('div');
-                messageDiv.classList.add('flex', sender === 'user' ? 'justify-end' : 'justify-start');
+  <script>
+    const chatbox = document.getElementById("chatbox");
+    const userInput = document.getElementById("userInput");
+    const sendBtn = document.getElementById("sendBtn");
+    const themeSelector = document.getElementById("themeSelector");
+    const historyBtn = document.getElementById("historyBtn");
+    const historyPanel = document.getElementById("historyPanel");
+    const historyContent = document.getElementById("historyContent");
 
-                const messageBubble = document.createElement('div');
-                messageBubble.classList.add('p-3', 'rounded-lg', 'max-w-[80%]', 'shadow-sm');
-                messageBubble.textContent = text;
+    let history = [];
 
-                if (sender === 'user') {
-                    messageBubble.classList.add('bg-indigo-500', 'text-white');
-                } else {
-                    messageBubble.classList.add('bg-gray-200', 'text-gray-800');
-                }
+    // Theme switching
+    themeSelector.addEventListener("change", () => {
+      document.body.className = themeSelector.value;
+    });
 
-                messageDiv.appendChild(messageBubble);
-                chatHistory.appendChild(messageDiv);
-                chatHistory.scrollTop = chatHistory.scrollHeight;
-            };
+    // Toggle history panel
+    historyBtn.addEventListener("click", () => {
+      historyPanel.classList.toggle("active");
+    });
 
-            const displayLoadingIndicator = () => {
-                const loadingDiv = document.createElement('div');
-                loadingDiv.id = 'loading-indicator';
-                loadingDiv.classList.add('flex', 'justify-start');
-                
-                const loadingBubble = document.createElement('div');
-                loadingBubble.classList.add('p-3', 'rounded-lg', 'bg-gray-200', 'text-gray-800', 'animate-pulse');
-                loadingBubble.textContent = '...';
-                
-                loadingDiv.appendChild(loadingBubble);
-                chatHistory.appendChild(loadingDiv);
-                chatHistory.scrollTop = chatHistory.scrollHeight;
-            };
+    // Send user message to backend
+    async function sendMessage() {
+      const text = userInput.value.trim();
+      if (!text) return;
 
-            const removeLoadingIndicator = () => {
-                const loadingIndicator = document.getElementById('loading-indicator');
-                if (loadingIndicator) {
-                    loadingIndicator.remove();
-                }
-            };
+      // Show user message
+      chatbox.innerHTML += `<div class="user"><b>You:</b> ${text}</div>`;
+      userInput.value = "";
 
-            chatForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const message = userInput.value.trim();
-                if (!message) {
-                    return;
-                }
-
-                addMessage('user', message);
-                userInput.value = '';
-                displayLoadingIndicator();
-
-                try {
-                    const response = await fetch('/chat', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({ message: message }),
-                    });
-
-                    const data = await response.json();
-                    removeLoadingIndicator();
-                    addMessage('bot', data.response);
-                } catch (error) {
-                    removeLoadingIndicator();
-                    addMessage('bot', 'Sorry, I am unable to connect to the server at the moment. Please try again later.');
-                    console.error('Error:', error);
-                }
-            });
+      try {
+        const res = await fetch("http://127.0.0.1:5000/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: text })
         });
-    </script>
+
+        if (!res.ok) throw new Error("Network error");
+        const data = await res.json();
+
+        chatbox.innerHTML += `<div class="bot"><b>Bot:</b> ${data.response}</div>`;
+
+        // Save to history
+        history.push({ user: text, bot: data.response });
+        updateHistory();
+
+      } catch (err) {
+        const failMsg = "Sorry, I am unable to connect to the server at the moment. Please try again later.";
+        chatbox.innerHTML += `<div class="bot"><b>Bot:</b> ${failMsg}</div>`;
+        history.push({ user: text, bot: failMsg });
+        updateHistory();
+      }
+
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+
+    function updateHistory() {
+      historyContent.innerHTML = "";
+      history.forEach((h, idx) => {
+        historyContent.innerHTML += `
+          <div class="history-entry">
+            <b>Q${idx+1}:</b> ${h.user}<br>
+            <b>A:</b> ${h.bot}
+          </div>
+        `;
+      });
+    }
+
+    sendBtn.addEventListener("click", sendMessage);
+    userInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") sendMessage();
+    });
+  </script>
 </body>
 </html>
